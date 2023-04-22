@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Wall
+  - Ground
+  - Charachter
+  - Object
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 321104807
+    locked: 0
+  - name: Features
+    uniqueID: 1253798053
+    locked: 0
+  - name: Body
+    uniqueID: 2445830101
+    locked: 0
+  - name: Objects
+    uniqueID: 551956389
+    locked: 0
+  - name: Character
+    uniqueID: 3925085941
+    locked: 0
+  - name: Player
+    uniqueID: 29029401
+    locked: 0
+  - name: Items
+    uniqueID: 2353690683
+    locked: 0
+  - name: Decoration
+    uniqueID: 433512595
+    locked: 0
+  - name: Collision
+    uniqueID: 863261683
+    locked: 0
+  - name: Crosshair
+    uniqueID: 129445573
+    locked: 0

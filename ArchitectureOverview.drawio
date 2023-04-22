@@ -1,0 +1,40 @@
+<mxfile host="Electron" modified="2023-04-20T11:27:14.429Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="8CYPztETqefONlUC4VlV" version="21.1.2" type="device">
+  <diagram name="LevelManger" id="bHvr9TqGMFDACeLhB8QG">
+    <mxGraphModel dx="1219" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PPUP5WftX-R2P43uVqcR-2" value="LevelManager" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-210" y="120" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="PPUP5WftX-R2P43uVqcR-3" value="levelProperties: LevelProperties" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="PPUP5WftX-R2P43uVqcR-2">
+          <mxGeometry y="30" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PPUP5WftX-R2P43uVqcR-4" value="levelType: LevelType" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="PPUP5WftX-R2P43uVqcR-2">
+          <mxGeometry y="60" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PPUP5WftX-R2P43uVqcR-5" value="enemies: List&amp;lt;&amp;gt;" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="PPUP5WftX-R2P43uVqcR-2">
+          <mxGeometry y="90" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PPUP5WftX-R2P43uVqcR-6" value="etc..." style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="PPUP5WftX-R2P43uVqcR-2">
+          <mxGeometry y="120" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PPUP5WftX-R2P43uVqcR-8" value="LevelProperties" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="70" y="120" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="PPUP5WftX-R2P43uVqcR-9" value="levelProperties: LevelProperties" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="PPUP5WftX-R2P43uVqcR-8">
+          <mxGeometry y="30" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PPUP5WftX-R2P43uVqcR-10" value="levelType: LevelType" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="PPUP5WftX-R2P43uVqcR-8">
+          <mxGeometry y="60" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PPUP5WftX-R2P43uVqcR-11" value="enemies: List&amp;lt;&amp;gt;" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="PPUP5WftX-R2P43uVqcR-8">
+          <mxGeometry y="90" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PPUP5WftX-R2P43uVqcR-12" value="etc..." style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="PPUP5WftX-R2P43uVqcR-8">
+          <mxGeometry y="120" width="180" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
