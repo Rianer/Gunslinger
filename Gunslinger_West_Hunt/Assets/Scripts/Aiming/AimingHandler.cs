@@ -4,7 +4,7 @@ using UnityEngine;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody2D))]
-public class AimingHandler : MonoBehaviour, IObserver<MovementObserverArgs>
+public class AimingHandler : MonoBehaviour, IObserver<InputObserverArgs>
 {
     private Rigidbody2D rb;
     private Vector2 mousePosition;
@@ -22,7 +22,7 @@ public class AimingHandler : MonoBehaviour, IObserver<MovementObserverArgs>
         rb.rotation = angle;
     }
 
-    public void UpdateObserver(MovementObserverArgs args)
+    public void UpdateObserver(InputObserverArgs args)
     {
         mousePosition = args.MousePosition;
     }

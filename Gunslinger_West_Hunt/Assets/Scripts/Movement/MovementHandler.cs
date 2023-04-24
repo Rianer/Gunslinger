@@ -5,7 +5,7 @@ using UnityEngine;
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent (typeof(MovementConfig))]
-public class MovementHandler : MonoBehaviour, IObserver<MovementObserverArgs>
+public class MovementHandler : MonoBehaviour, IObserver<InputObserverArgs>
 {
     private Vector2 movement;
     private Rigidbody2D rb;
@@ -21,7 +21,7 @@ public class MovementHandler : MonoBehaviour, IObserver<MovementObserverArgs>
     {
         rb.velocity = movement;
     }
-    public void UpdateObserver(MovementObserverArgs args)
+    public void UpdateObserver(InputObserverArgs args)
     {
         movement = args.NormalizedInputVector * movementConfig.speed;
     }

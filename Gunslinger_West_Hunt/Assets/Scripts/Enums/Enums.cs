@@ -20,3 +20,23 @@ public enum DamageType
     chemical,
     spiritual
 }
+
+public enum WeaponAttackType
+{
+    ranged,
+    melee
+}
+
+public enum BulletDamageArea
+{
+    single,
+    small,
+    large
+}
+
+public enum BulletType
+{
+    common,
+    piercing,
+    blunt
+}

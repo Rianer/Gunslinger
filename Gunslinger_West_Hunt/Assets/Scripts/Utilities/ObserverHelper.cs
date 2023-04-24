@@ -24,10 +24,14 @@ public interface ISubject<T>
 /// <summary>
 /// Argument class for movement parrameters
 /// </summary>
-public class MovementObserverArgs
+public class InputObserverArgs
 {
     private Vector2 mousePosition;
     private Vector2 normalizedInputVector;
+    /// <summary>
+    /// Binary variable that represents which buttons were clicked
+    /// </summary>
+    private ClickedButtons clickedButtons = new ClickedButtons();
     public Vector2 NormalizedInputVector
     {
         get { return normalizedInputVector; }
@@ -37,13 +41,43 @@ public class MovementObserverArgs
     {
         get { return mousePosition; }
     }
+
+    public ClickedButtons ClickedButtons
+    {
+        get { return clickedButtons; }
+    }
+
     /// <summary>
-    /// Creates an instance of the class MovementObserverArgs
+    /// Add the Normalized Input Vector and the Mouse Position Vector to the Input Arguments
     /// </summary>
-    /// <param name="normalizedInputVector">A normalized Vector2 that represents the player's input on vertical and horizontal axis</param>
-    public MovementObserverArgs(Vector2 normalizedInputVector, Vector2 mousePosition)
+    /// <param name="normalizedInputVector"></param>
+    /// <param name="mousePosition"></param>
+    /// <returns></returns>
+    public InputObserverArgs Add(Vector2 normalizedInputVector, Vector2 mousePosition)
     {
         this.normalizedInputVector = normalizedInputVector;
         this.mousePosition = mousePosition;
+        return this;
+    }
+
+    public InputObserverArgs Add(ClickedButtons clickedButtons)
+    {
+        this.clickedButtons = clickedButtons;
+        return this;
+    }
+}
+
+
+public class ClickedButtons
+{
+    public bool fire;
+    public bool ability;
+    public bool interract;
+
+    public ClickedButtons()
+    {
+        fire = false;
+        ability = false;
+        interract = false;
     }
 }

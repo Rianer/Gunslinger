@@ -3,25 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class InputHandler : MonoBehaviour, ISubject<MovementObserverArgs>
+public class InputHandler : MonoBehaviour, ISubject<InputObserverArgs>
 {
-    private List<IObserver<MovementObserverArgs>> observers;
+    private List<IObserver<InputObserverArgs>> observers;
     private float horizontalAxisInput;
     private float verticalAxisInput;
+    private ClickedButtons clickedButtons;
 
     private void Awake()
     {
         horizontalAxisInput = 0f;
         verticalAxisInput = 0f;
-        observers = new List<IObserver<MovementObserverArgs>>();
+        clickedButtons = new ClickedButtons();
+        observers = new List<IObserver<InputObserverArgs>>();
     }
 
     private void Update()
     {
+
+        HandleClickedFireB();
         horizontalAxisInput = Input.GetAxisRaw("Horizontal");
         verticalAxisInput = Input.GetAxisRaw("Vertical");
-
-        NotifyObserver(new MovementObserverArgs(new Vector2(horizontalAxisInput, verticalAxisInput).normalized, Camera.main.ScreenToWorldPoint(Input.mousePosition)));
+        Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 normalizedInputVector = new Vector2(horizontalAxisInput, verticalAxisInput).normalized;
+        NotifyObserver(new InputObserverArgs()
+            .Add(normalizedInputVector, cursorPosition)
+            .Add(clickedButtons)
+            );
     }
 
     public Vector2 GetInputValues()
@@ -29,21 +37,33 @@ public class InputHandler : MonoBehaviour, ISubject<MovementObserverArgs>
         return new Vector2(horizontalAxisInput, verticalAxisInput);
     }
 
-    public void AddObserver(IObserver<MovementObserverArgs> observer)
+    public void AddObserver(IObserver<InputObserverArgs> observer)
     {
         observers.Add(observer);
     }
 
-    public void RemoveObserver(IObserver<MovementObserverArgs> observer)
+    public void RemoveObserver(IObserver<InputObserverArgs> observer)
     {
         observers.Remove(observer);
     }
 
-    public void NotifyObserver(MovementObserverArgs arguments)
+    public void NotifyObserver(InputObserverArgs arguments)
     {
-        foreach(IObserver<MovementObserverArgs> observer in observers)
+        foreach(IObserver<InputObserverArgs> observer in observers)
         {
             observer.UpdateObserver(arguments);
+        }
+    }
+
+    private void HandleClickedFireB()
+    {
+        if (Input.GetAxisRaw("Fire1") != 0)
+        {
+            clickedButtons.fire = true;
+        }
+        else if(Input.GetAxisRaw("Fire1") == 0)
+        {
+            clickedButtons.fire = false;
         }
     }
 

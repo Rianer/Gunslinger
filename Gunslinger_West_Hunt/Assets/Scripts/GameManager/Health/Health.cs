@@ -8,6 +8,16 @@ public class Health : MonoBehaviour
     private int startingHealth;
     private int currentHealth;
 
+    public int StartingHealth
+    {
+        get { return startingHealth; }
+    }
+
+    public int CurrentHealth
+    {
+        get { return currentHealth; }
+    }
+
     public void SetStartingHealth(int amount)
     {
         startingHealth = amount;
@@ -31,13 +41,5 @@ public class Health : MonoBehaviour
         return false;
     }
 
-    public int GetStartingHealth()
-    {
-        return startingHealth;
-    }
-
-    public int GetCurrentHealth()
-    {
-        return currentHealth;
-    }
+    
 }

@@ -30,11 +30,11 @@ public class Player : MonoBehaviour
     public void Initialize(PlayerCharactersiticsSO playerCharactersitics)
     {
         this.playerCharactersitics = playerCharactersitics;
-        SetHealth();
+        InitializeHealth();
     }
 
 
-    private void SetHealth()
+    private void InitializeHealth()
     {
         health.SetStartingHealth(playerCharactersitics.playerHealthAmount);
 

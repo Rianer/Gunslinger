@@ -6,18 +6,22 @@ using UnityEngine;
 [RequireComponent(typeof(InputHandler))]
 [RequireComponent(typeof(MovementHandler))]
 [RequireComponent(typeof(AimingHandler))]
-public class MovementController : MonoBehaviour
+[RequireComponent (typeof(FireHandler))]
+public class PlayerController : MonoBehaviour
 {
     private InputHandler inputHandler;
     private MovementHandler movementHandler;
     private AimingHandler aimingHandler;
+    private FireHandler fireHandler;
 
     private void Start()
     {
         inputHandler = GetComponent<InputHandler>();
         movementHandler = GetComponent<MovementHandler>();
         aimingHandler = GetComponent<AimingHandler>();
+        fireHandler = GetComponent<FireHandler>();
         inputHandler.AddObserver(movementHandler);
         inputHandler.AddObserver(aimingHandler);
+        inputHandler.AddObserver(fireHandler);
     }
 }

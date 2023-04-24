@@ -16,7 +16,7 @@ TagManager:
   - Charachter
   - Object
   - Player
-  - 
+  - Item
   - 
   - 
   - 
@@ -64,6 +64,9 @@ TagManager:
     locked: 0
   - name: Items
     uniqueID: 2353690683
+    locked: 0
+  - name: Projectiles
+    uniqueID: 808578063
     locked: 0
   - name: Decoration
     uniqueID: 433512595
