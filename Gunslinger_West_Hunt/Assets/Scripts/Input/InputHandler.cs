@@ -20,7 +20,8 @@ public class InputHandler : MonoBehaviour, ISubject<MovementObserverArgs>
     {
         horizontalAxisInput = Input.GetAxisRaw("Horizontal");
         verticalAxisInput = Input.GetAxisRaw("Vertical");
-        NotifyObserver(new MovementObserverArgs(new Vector2(horizontalAxisInput, verticalAxisInput).normalized));
+
+        NotifyObserver(new MovementObserverArgs(new Vector2(horizontalAxisInput, verticalAxisInput).normalized, Camera.main.ScreenToWorldPoint(Input.mousePosition)));
     }
 
     public Vector2 GetInputValues()

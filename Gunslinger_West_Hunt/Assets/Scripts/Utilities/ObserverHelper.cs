@@ -26,18 +26,24 @@ public interface ISubject<T>
 /// </summary>
 public class MovementObserverArgs
 {
-
+    private Vector2 mousePosition;
     private Vector2 normalizedInputVector;
     public Vector2 NormalizedInputVector
     {
         get { return normalizedInputVector; }
     }
+
+    public Vector2 MousePosition
+    {
+        get { return mousePosition; }
+    }
     /// <summary>
     /// Creates an instance of the class MovementObserverArgs
     /// </summary>
     /// <param name="normalizedInputVector">A normalized Vector2 that represents the player's input on vertical and horizontal axis</param>
-    public MovementObserverArgs(Vector2 normalizedInputVector)
+    public MovementObserverArgs(Vector2 normalizedInputVector, Vector2 mousePosition)
     {
         this.normalizedInputVector = normalizedInputVector;
+        this.mousePosition = mousePosition;
     }
 }
