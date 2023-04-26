@@ -40,3 +40,11 @@ public enum BulletType
     piercing,
     blunt
 }
+
+public enum ItemType
+{
+    equipment,
+    junk,
+    consumable,
+    misc
+}

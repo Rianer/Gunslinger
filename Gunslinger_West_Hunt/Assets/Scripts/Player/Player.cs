@@ -11,7 +11,6 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
-[RequireComponent(typeof(PolygonCollider2D))]
 #endregion
 public class Player : MonoBehaviour
 {

@@ -17,7 +17,7 @@ public class MovementHandler : MonoBehaviour, IObserver<InputObserverArgs>
         movement = new Vector2();
         movementConfig = GetComponent<MovementConfig>();
     }
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         rb.velocity = movement;
     }

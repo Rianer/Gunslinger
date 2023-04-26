@@ -53,8 +53,8 @@ TagManager:
   - name: Body
     uniqueID: 2445830101
     locked: 0
-  - name: Objects
-    uniqueID: 551956389
+  - name: Items
+    uniqueID: 2353690683
     locked: 0
   - name: Character
     uniqueID: 3925085941
@@ -62,8 +62,8 @@ TagManager:
   - name: Player
     uniqueID: 29029401
     locked: 0
-  - name: Items
-    uniqueID: 2353690683
+  - name: Objects
+    uniqueID: 551956389
     locked: 0
   - name: Projectiles
     uniqueID: 808578063

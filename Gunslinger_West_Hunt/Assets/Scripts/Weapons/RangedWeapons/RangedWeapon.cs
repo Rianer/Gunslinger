@@ -22,4 +22,15 @@ public class RangedWeapon : Weapon
         bullet.ApplyProperties(weaponStats);
         bullet.Fire(firePoint.up);
     }
+
+    public void AimWeapon(Vector2 crosshairCoordinates)
+    {
+        Vector2 lookDirection = crosshairCoordinates - new Vector2(transform.position.x, transform.position.y);
+        if(lookDirection.magnitude > 1)
+        {
+            float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+        
+    }
 }
