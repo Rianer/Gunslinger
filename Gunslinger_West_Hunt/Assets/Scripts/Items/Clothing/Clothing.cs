@@ -9,11 +9,4 @@ public class Clothing : Item
     {
         get { return armor; }
     }
-    public override void PickUp()
-    {
-    }
-
-    public override void Throw()
-    {
-    }
 }

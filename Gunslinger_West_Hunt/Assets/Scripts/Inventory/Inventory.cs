@@ -5,8 +5,19 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    private static Inventory inventory;
     private Dictionary<string, Item> lootableItems = new Dictionary<string, Item>();
-    private List<ItemDetailSO> itemList = new List<ItemDetailSO>();
+    private Dictionary<ItemDetailSO, int> inventoryItems = new Dictionary<ItemDetailSO, int>();
+
+    private void Awake()
+    {
+        inventory = this;
+    }
+
+    public static Inventory GetInstance()
+    {
+        return inventory;
+    }
 
     public List<Item> GetLootableItemsList()
     {
@@ -41,9 +52,53 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void AddItemToInventory(Item item)
+    public void AddItemToInventory(ItemDetailSO itemDetails)
     {
-
+        if (inventoryItems.ContainsKey(itemDetails))
+        {
+            inventoryItems[itemDetails] += 1;
+        }
+        else
+        {
+            inventoryItems.Add(itemDetails, 1);
+        }
     }
 
+    public void DebugInventory()
+    {
+        string output = "";
+        foreach(var item in inventoryItems)
+        {
+            output += item.Key.itemName + ": " + item.Value.ToString() + "\n";
+        }
+        Debug.Log(output);
+    }
+
+    private void ColectItem(Item item)
+    {
+        if (item != null)
+        {
+            lootableItems.Remove(item.Id);
+            Destroy(item.gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("e"))
+        {
+            Item previousItem = null;
+            foreach(Item item in lootableItems.Values)
+            {
+                ColectItem(previousItem);
+                AddItemToInventory(item.details);
+                previousItem = item;
+            }
+            ColectItem(previousItem);
+        }
+        if (Input.GetKeyDown("p"))
+        {
+            DebugInventory();
+        }
+    }
 }

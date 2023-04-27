@@ -3,17 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public interface ILootable
-{ 
-    void PickUp();
-    void Throw();
-}
-
 [DisallowMultipleComponent]
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
-public abstract class Item : MonoBehaviour, ILootable
+public abstract class Item : MonoBehaviour
 {
     [SerializeField] private string id;
     public ItemDetailSO details;
@@ -69,7 +62,4 @@ public abstract class Item : MonoBehaviour, ILootable
         itemType = details.type;
     }
 
-    public abstract void PickUp();
-
-    public abstract void Throw();
 }

@@ -17,11 +17,5 @@ public class Potion : Item
         healthPoints = details.healthPoints;
     }
 
-    public override void PickUp()
-    {
-    }
 
-    public override void Throw()
-    {
-    }
 }
