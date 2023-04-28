@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Clothing : Item
 {
-    [SerializeField] private int armor;
+    private int armor;
     public int Armor
     {
         get { return armor; }
+    }
+
+    protected override void ApplyDetails()
+    {
+        base.ApplyDetails();
+        armor = details.armor;
     }
 }

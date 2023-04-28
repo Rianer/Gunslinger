@@ -5,7 +5,7 @@ using UnityEngine;
 public class Potion : Item
 {
 
-    [SerializeField] private int healthPoints;
+    private int healthPoints;
     public int HealthPoints
     {
         get { return healthPoints; }
@@ -16,6 +16,4 @@ public class Potion : Item
         base.ApplyDetails();
         healthPoints = details.healthPoints;
     }
-
-
 }

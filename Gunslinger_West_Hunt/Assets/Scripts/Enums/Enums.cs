@@ -44,7 +44,7 @@ public enum BulletType
 public enum ItemType
 {
     equipment,
-    junk,
+    bounty,
     consumable,
     misc
 }

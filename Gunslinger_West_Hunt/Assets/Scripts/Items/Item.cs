@@ -1,20 +1,22 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 [DisallowMultipleComponent]
+[RequireComponent (typeof(Transform))]
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 public abstract class Item : MonoBehaviour
 {
     [SerializeField] private string id;
-    public ItemDetailSO details;
+    [SerializeField] public ItemDetailSO details;
     private SpriteRenderer spriteRenderer;
-    [SerializeField] private string itemName;
-    [SerializeField] private ItemType itemType;
-    [SerializeField] private float weight;
-    [SerializeField] private float value;
+    private string itemName;
+    private ItemType itemType;
+    private float weight;
+    private float value;
 
     public string Id
     {
@@ -42,12 +44,19 @@ public abstract class Item : MonoBehaviour
         id = Guid.NewGuid().ToString();
     }
 
+    public Item(ItemDetailSO details)
+    {
+        id = Guid.NewGuid().ToString();
+        this.details = details;
+        ApplyDetails();
+    }
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void Start()
+    protected void Start()
     {
         id = Guid.NewGuid().ToString();
         ApplyDetails();
@@ -56,6 +65,8 @@ public abstract class Item : MonoBehaviour
     protected virtual void ApplyDetails()
     {
         spriteRenderer.sprite = details.inGameSprite;
+        spriteRenderer.sortingLayerName = "Items";
+        GetComponent<BoxCollider2D>().isTrigger = true;
         weight = details.weight;
         value = details.value;
         itemName = details.itemName;

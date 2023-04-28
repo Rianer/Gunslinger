@@ -5,13 +5,30 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    //TODO add inventory limit validation: available slots/total slots
     private static Inventory inventory;
     private Dictionary<string, Item> lootableItems = new Dictionary<string, Item>();
     private Dictionary<ItemDetailSO, int> inventoryItems = new Dictionary<ItemDetailSO, int>();
 
+    #region Callback Functions
+    public delegate void OnLootableItemChanged();
+    public OnLootableItemChanged onLootableItemChanged;
+
+    public delegate void OnInventoryChanged();
+    public OnInventoryChanged onInventoryChanged;
+    #endregion Callback Functions
+
     private void Awake()
     {
         inventory = this;
+    }
+
+    private void Start()
+    {
+        if (onInventoryChanged != null)
+        {
+            onInventoryChanged.Invoke();
+        }
     }
 
     public static Inventory GetInstance()
@@ -39,7 +56,11 @@ public class Inventory : MonoBehaviour
         if (!lootableItems.ContainsKey(newItem.Id))
         {
             lootableItems.Add(newItem.Id, newItem);
-            DebugLootableItems();
+
+            if(onLootableItemChanged != null)
+            {
+                onLootableItemChanged.Invoke();
+            }
         }
     }
 
@@ -49,7 +70,17 @@ public class Inventory : MonoBehaviour
         {
             lootableItems.Remove(targetItem.Id);
             DebugLootableItems();
+
+            if (onLootableItemChanged != null)
+            {
+                onLootableItemChanged.Invoke();
+            }
         }
+    }
+
+    public Dictionary<ItemDetailSO, int> GetInventoryItems()
+    {
+        return inventoryItems;
     }
 
     public void AddItemToInventory(ItemDetailSO itemDetails)
@@ -61,6 +92,31 @@ public class Inventory : MonoBehaviour
         else
         {
             inventoryItems.Add(itemDetails, 1);
+        }
+
+        if(onInventoryChanged != null)
+        {
+            onInventoryChanged.Invoke();
+        }
+    }
+
+    public void RemoveItemFromInventory(ItemDetailSO itemDetails)
+    {
+        if (inventoryItems.ContainsKey(itemDetails))
+        {
+            if (inventoryItems[itemDetails] > 1)
+            {
+                inventoryItems[itemDetails] -= 1;
+            }
+            else
+            {
+                inventoryItems.Remove(itemDetails);
+            }
+
+            if (onInventoryChanged != null)
+            {
+                onInventoryChanged.Invoke();
+            }
         }
     }
 
@@ -74,28 +130,38 @@ public class Inventory : MonoBehaviour
         Debug.Log(output);
     }
 
-    private void ColectItem(Item item)
+    public void CollectItem(Item item)
     {
         if (item != null)
         {
+            AddItemToInventory(item.details);
             lootableItems.Remove(item.Id);
             Destroy(item.gameObject);
+
+            if (onLootableItemChanged != null)
+            {
+                onLootableItemChanged.Invoke();
+            }
         }
+    }
+
+    private void CollectAllItems()
+    {
+        List<Item> itemsToCollect = GetLootableItemsList();
+        foreach (Item item in itemsToCollect)
+        {
+            CollectItem(item);
+            AddItemToInventory(item.details);
+        }
+
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown("e"))
-        {
-            Item previousItem = null;
-            foreach(Item item in lootableItems.Values)
-            {
-                ColectItem(previousItem);
-                AddItemToInventory(item.details);
-                previousItem = item;
-            }
-            ColectItem(previousItem);
-        }
+        //if (Input.GetKeyDown("e"))
+        //{
+        //    CollectAllItems();
+        //}
         if (Input.GetKeyDown("p"))
         {
             DebugInventory();

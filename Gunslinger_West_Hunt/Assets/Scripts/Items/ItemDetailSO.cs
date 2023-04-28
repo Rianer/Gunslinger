@@ -14,6 +14,7 @@ public class ItemDetailSO : ScriptableObject
     public ItemType type;
     public int armor;
     public int healthPoints;
+    public int experiencePoints;
 
 
     private void OnValidate()
@@ -34,6 +35,10 @@ public class ItemDetailSO : ScriptableObject
         if (type != ItemType.consumable)
         {
             healthPoints = 0;
+        }
+        if (type != ItemType.bounty)
+        {
+            experiencePoints = 0;
         }
     }
 }

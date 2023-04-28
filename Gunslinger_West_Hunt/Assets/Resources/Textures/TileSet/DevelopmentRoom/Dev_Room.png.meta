@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -643,9 +643,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dev_Room_3: 690365063
-      Dev_Room_4: -1378339590
       Dev_Room_10: 1133526150
+      Dev_Room_4: -1378339590
+      Dev_Room_3: 690365063
       Dev_Room_14: 776783307
       Dev_Room_23: -2068484157
       Dev_Room_13: -1068042176

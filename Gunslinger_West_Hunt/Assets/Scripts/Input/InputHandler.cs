@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 
 [DisallowMultipleComponent]
@@ -57,6 +58,11 @@ public class InputHandler : MonoBehaviour, ISubject<InputObserverArgs>
 
     private void HandleClickedFireB()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            clickedButtons.fire = false;
+            return;
+        }
         if (Input.GetAxisRaw("Fire1") != 0)
         {
             clickedButtons.fire = true;
