@@ -3,26 +3,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CircleCollider2D))]
 public class EnemyAI : MonoBehaviour
 {
     public Transform target;
-    public float speed = 20;
-    public float nextWaypointDistance = 3;
+    public float speed;
+    public float nextWaypointDistance;
 
-    private Path path;
+    #region LOS Detection
+    public float LOS_DetectionRange;
+    public int LOS_DetectionAngle;
+    public Transform viewPoint;
+    private LayerMask targetLayer;
+    public LayerMask hitableLayers;
+    private bool targetDetected;
+    #endregion
+
+    private Path path = null;
     private int currentWaypoint = 0;
     private bool followingPath;
 
     private Seeker seeker;
     private Rigidbody2D rb;
 
-
     private void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        followingPath = true;
-        BuildPathToTarget();
+        followingPath = false;
+        targetLayer = LayerMask.NameToLayer("Player");
+        InvokeRepeating("CheckTargetDetection", 0, 0.1f);
     }
     private void BuildPathToTarget()
     {
@@ -39,16 +49,49 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        
+        if (targetDetected && !followingPath)
+        {
+            BuildPathToTarget();
+        }
+    }
+
     private void FixedUpdate()
     {
-        if (followingPath) 
+        if (followingPath && path != null) 
         {
             FollowPathToTarget();
         }
     }
 
+    Vector2 directionToPlayer = new Vector2();
+    float distanceToPlayer = 0;
+    float angleToPlayer = 0;
+
+    private void CheckTargetDetection()
+    {
+        directionToPlayer = (Vector2)(target.position - viewPoint.position);
+        distanceToPlayer = directionToPlayer.magnitude;
+        directionToPlayer.Normalize();
+        angleToPlayer = Vector2.Angle(viewPoint.up, directionToPlayer);
+
+        if (distanceToPlayer <= LOS_DetectionRange && angleToPlayer <= LOS_DetectionAngle)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(viewPoint.position, directionToPlayer, distanceToPlayer, hitableLayers);
+            if(hit.collider != null && hit.transform.gameObject.layer == targetLayer.value)
+            {
+                targetDetected = true;
+                return;
+            }
+        }
+        targetDetected = false;
+    }
+
     private void RefreshCurrentPath()
     {
+        path = null;
         currentWaypoint = 0;
         followingPath=false;
 
@@ -75,7 +118,6 @@ public class EnemyAI : MonoBehaviour
 
             followingPath = false;
             StopFollowingPath();
-            Debug.Log("Reached Endpoint");
             return;
         }
     }
