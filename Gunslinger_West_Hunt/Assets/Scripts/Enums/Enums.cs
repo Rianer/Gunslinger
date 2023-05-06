@@ -48,3 +48,15 @@ public enum ItemType
     consumable,
     misc
 }
+
+public enum MovingDirection
+{
+    E,
+    S,
+    N,
+    W,
+    NE,
+    NW,
+    SE,
+    SW
+}

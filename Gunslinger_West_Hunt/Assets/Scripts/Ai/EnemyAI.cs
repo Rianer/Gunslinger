@@ -2,6 +2,7 @@ using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(CircleCollider2D))]
 public class EnemyAI : MonoBehaviour
@@ -9,6 +10,7 @@ public class EnemyAI : MonoBehaviour
     public Transform target;
     public float speed;
     public float nextWaypointDistance;
+    public MovingDirection movingDirection;
 
     #region LOS Detection
     public float LOS_DetectionRange;
@@ -28,6 +30,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Start()
     {
+        movingDirection = MovingDirection.N;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         followingPath = false;
@@ -101,10 +104,12 @@ public class EnemyAI : MonoBehaviour
     private void FollowPathToTarget()
     {
         
-        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 velocity = direction * speed;
+        Vector2 movementVector = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+        movingDirection = MovingDirectionHelper.detectMovingDirection(movementVector);
+        Vector2 lookDirection = (Vector2)target.position - rb.position;
+        Vector2 velocity = movementVector * speed;
         rb.velocity = velocity;
-        rb.rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
+        rb.rotation = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90;
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
