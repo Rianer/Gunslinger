@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class MovementConfig : MonoBehaviour 
 {
-    public float speed = 1f;
+    public float speed;
 }

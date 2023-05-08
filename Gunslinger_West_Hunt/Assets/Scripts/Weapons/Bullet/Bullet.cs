@@ -38,12 +38,16 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
-
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            VitalityManager vitalityManager = collision.gameObject.GetComponent<VitalityManager>();
+            vitalityManager.ReceiveDamage(damage);
+        }
     }
 
-    public void DealDamage(Health targetHealth)
+    public void DealDamage()
     {
         //TODO: calculate complex damage model
-        targetHealth.inflictDamage(damage);
+        
     }
 }

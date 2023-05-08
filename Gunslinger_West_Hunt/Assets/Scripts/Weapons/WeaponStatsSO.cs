@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="WeaponStats_", menuName = "Weapon/Ranged")]
+[CreateAssetMenu(fileName ="WeaponStats_", menuName = "Scriptable Objects/Weapon/Ranged")]
 public class WeaponStatsSO : ScriptableObject
 {
     public int damage;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "_Details", menuName = "Item/New Item Details")]
+[CreateAssetMenu(fileName = "_Details", menuName = "Scriptable Objects/Item/New Item Details")]
 public class ItemDetailSO : ScriptableObject
 {
     public bool useSameSprite;

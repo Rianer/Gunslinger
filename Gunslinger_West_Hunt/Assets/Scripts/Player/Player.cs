@@ -5,7 +5,6 @@ using UnityEngine.Rendering;
 
 #region REQUIRE_COMPONENTS
 [DisallowMultipleComponent]
-[RequireComponent(typeof(Health))]
 [RequireComponent(typeof(SortingGroup))]
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Animator))]
@@ -15,13 +14,11 @@ using UnityEngine.Rendering;
 public class Player : MonoBehaviour
 {
     [HideInInspector] public PlayerCharactersiticsSO playerCharactersitics;
-    [HideInInspector] public Health health;
     [HideInInspector] public SpriteRenderer spriteRenderer;
     [HideInInspector] public Animator animator;
 
     private void Awake()
     {
-        health = GetComponent<Health>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
@@ -29,13 +26,5 @@ public class Player : MonoBehaviour
     public void Initialize(PlayerCharactersiticsSO playerCharactersitics)
     {
         this.playerCharactersitics = playerCharactersitics;
-        InitializeHealth();
-    }
-
-
-    private void InitializeHealth()
-    {
-        health.SetStartingHealth(playerCharactersitics.playerHealthAmount);
-
     }
 }
