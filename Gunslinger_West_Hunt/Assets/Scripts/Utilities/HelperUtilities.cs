@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public static class HelperUtilities
 {
@@ -231,6 +232,13 @@ public static class HelperUtilities
         if (ValidateCheckPositiveValue(thisObject, fieldNameMaximum, valueToCheckMaximum, isZeroAllowed)) error = true;
 
         return error;
+    }
+
+
+    public static bool OfChance(float probability)
+    {
+        Random random = new Random();
+        return random.NextDouble() < probability;
     }
 
 }

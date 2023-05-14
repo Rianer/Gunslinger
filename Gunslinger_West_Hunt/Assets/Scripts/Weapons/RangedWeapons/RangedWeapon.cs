@@ -6,7 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class RangedWeapon : Weapon
 {
-    //[SerializeField] private Transform crossHair;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private WeaponStatsSO weaponStats;

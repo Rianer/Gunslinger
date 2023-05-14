@@ -1,4 +1,5 @@
 using Pathfinding;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +19,8 @@ public class EnemyAI : MonoBehaviour
     public Transform viewPoint;
     private LayerMask targetLayer;
     public LayerMask hitableLayers;
-    private bool targetDetected;
+    private bool isTargetDetected;
+    public event EventHandler<TargetDetectedEventArgs> TargetDetected;
     #endregion
 
     private Path path = null;
@@ -55,7 +57,7 @@ public class EnemyAI : MonoBehaviour
     private void Update()
     {
         
-        if (targetDetected && !followingPath)
+        if (isTargetDetected && !followingPath)
         {
             BuildPathToTarget();
         }
@@ -73,6 +75,8 @@ public class EnemyAI : MonoBehaviour
     float distanceToPlayer = 0;
     float angleToPlayer = 0;
 
+    public bool IsTargetDetected { get => isTargetDetected;}
+
     private void CheckTargetDetection()
     {
         directionToPlayer = (Vector2)(target.position - viewPoint.position);
@@ -85,11 +89,12 @@ public class EnemyAI : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(viewPoint.position, directionToPlayer, distanceToPlayer, hitableLayers);
             if(hit.collider != null && hit.transform.gameObject.layer == targetLayer.value)
             {
-                targetDetected = true;
+                isTargetDetected = true;
+                OnTargetDetected(new TargetDetectedEventArgs(target));
                 return;
             }
         }
-        targetDetected = false;
+        isTargetDetected = false;
     }
 
     private void RefreshCurrentPath()
@@ -133,4 +138,19 @@ public class EnemyAI : MonoBehaviour
         RefreshCurrentPath();
     }
 
+
+    protected virtual void OnTargetDetected(TargetDetectedEventArgs e)
+    {
+        TargetDetected?.Invoke(this, e);
+    }
+}
+
+public class TargetDetectedEventArgs : EventArgs
+{
+    public Transform target;
+
+    public TargetDetectedEventArgs(Transform position)
+    {
+        target = position;
+    }
 }
