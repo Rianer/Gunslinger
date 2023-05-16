@@ -15562,6 +15562,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1573411831}
+    - target: {fileID: 940397802606265180, guid: 904d92e3c49df1e408005c0b7ae24b24, type: 3}
+      propertyPath: keepFollowingPlayerMS
+      value: 4000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 904d92e3c49df1e408005c0b7ae24b24, type: 3}
 --- !u!1001 &2290767527115966451
