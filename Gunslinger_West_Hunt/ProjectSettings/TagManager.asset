@@ -43,6 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Collision
+    uniqueID: 863261683
+    locked: 0
   - name: Ground
     uniqueID: 321104807
     locked: 0
@@ -72,7 +75,4 @@ TagManager:
     locked: 0
   - name: Crosshair
     uniqueID: 129445573
-    locked: 0
-  - name: Collision
-    uniqueID: 863261683
     locked: 0

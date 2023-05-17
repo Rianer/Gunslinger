@@ -241,4 +241,13 @@ public static class HelperUtilities
         return random.NextDouble() < probability;
     }
 
+    public static bool LayerContains(LayerMask layerMask, int layer)
+    {
+        if ((layerMask.value & (1 << layer)) > 0)
+        {
+            return true;
+        }
+        return false;
+    }
+
 }

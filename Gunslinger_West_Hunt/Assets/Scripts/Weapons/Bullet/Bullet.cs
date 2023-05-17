@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 
 [DisallowMultipleComponent]
@@ -10,15 +12,26 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private BoxCollider2D bulletCollider;
+    [SerializeField] private ParticleSystem bulletHitSurfaceParticles;
     private int damage;
     private DamageType damageType;
     private float bulletSpeed;
     private BulletType bulletType;
     private BulletDamageArea damageArea;
+    public LayerMask wallsLayer;
+    public LayerMask charactersLayer;
+    public int wallsPiercingCount;
+    public int charactersPiercingCount;
+    private int remainingWallPiercing;
+    private int remainingCharactersPiercing;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        bulletCollider = GetComponent<BoxCollider2D>();
+        //remainingWallPiercing = wallsPiercingCount;
+        //remainingCharactersPiercing = charactersPiercingCount;
     }
 
     public void ApplyProperties(WeaponStatsSO weaponStats)
@@ -37,17 +50,64 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
-        if (collision.gameObject.CompareTag("Enemy"))
+        Instantiate(bulletHitSurfaceParticles, rb.position, Quaternion.identity);
+        Destroy(gameObject);   
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (wallsLayer.value == 1 << collider.gameObject.layer)
         {
-            VitalityManager vitalityManager = collision.gameObject.GetComponent<VitalityManager>();
-            vitalityManager.ReceiveDamage(damage);
+            if(wallsPiercingCount > 0)
+            {
+                wallsPiercingCount--;
+                UpdateCollision(true, collider);
+            }
+            else
+            {
+                UpdateCollision(false, collider);
+            }
+            OnWallHit(collider);
+        }
+        if(charactersLayer.value == 1 << collider.gameObject.layer)
+        {
+            if(charactersPiercingCount > 0)
+            {
+                charactersPiercingCount--;
+                UpdateCollision(true, collider);
+            }
+            else
+            {
+                UpdateCollision(false, collider);
+            }
+            OnCharacterHit(collider);
         }
     }
 
-    public void DealDamage()
+    private void UpdateCollision(bool ignoreCollision, Collider2D collider)
+    {
+        Physics2D.IgnoreCollision(bulletCollider, collider, ignoreCollision);
+    }
+
+    private void OnCharacterHit(Collider2D collider)
+    {
+        Debug.Log("Character Hit");
+        if (collider.gameObject.CompareTag("Enemy"))
+        {
+            VitalityManager vitalityManager = collider.gameObject.GetComponent<VitalityManager>();
+            DealDamage(vitalityManager);
+        }
+    }
+
+    private void OnWallHit(Collider2D collider)
+    {
+        Debug.Log($"Wall Hit");
+    }
+
+    private void DealDamage(VitalityManager targetVitalityManager)
     {
         //TODO: calculate complex damage model
-        
+        targetVitalityManager.ReceiveDamage(damage);
+
     }
 }
