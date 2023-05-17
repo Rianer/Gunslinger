@@ -115,6 +115,7 @@ public class EnemyAI : MonoBehaviour
         if (distanceToPlayer <= LOS_DetectionRange && angleToPlayer <= LOS_DetectionAngle)
         {
             RaycastHit2D hit = Physics2D.Raycast(viewPoint.position, directionToPlayer, distanceToPlayer, hitableLayers);
+            Debug.DrawRay((Vector3)viewPoint.position, directionToPlayer * distanceToPlayer);
             if(hit.collider != null && hit.transform.gameObject.layer == targetLayer.value)
             {
                 isTargetInLOS = true;
