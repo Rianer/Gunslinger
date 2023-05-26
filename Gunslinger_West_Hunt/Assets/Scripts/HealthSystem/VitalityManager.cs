@@ -12,7 +12,7 @@ public class VitalityManager : MonoBehaviour
     private Armor armor;
 
     public CharacterStatsSO CharacterStats { get => characterStats;}
-
+    public Health Health { get => health;}
 
     private void Start()
     {
@@ -47,8 +47,18 @@ public class VitalityManager : MonoBehaviour
 
     private void OnZeroHealth()
     {
-        Debug.Log("Unit Killed");
-        Destroy(gameObject);
+        if (!gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+            Debug.Log("Unit Killed");
+
+        }
+        else
+        {
+            GameManager.Instance.IsPlayerAlive = false;
+            Debug.Log("Player Killed");
+
+        }
     }
 
 

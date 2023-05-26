@@ -27,6 +27,8 @@ public class EnemyAI : MonoBehaviour
     private bool isTargetPositionMemorized;
     #endregion
 
+    public float guaranteedDetectionRadius;
+
     private Path path = null;
     private int currentWaypoint = 0;
     private bool followingPath;
@@ -41,6 +43,8 @@ public class EnemyAI : MonoBehaviour
 
     private bool isTargetFollowable;
 
+    private VitalityManager targetVitalityManager;
+
     private void Start()
     {
         allowPathPloting = true;
@@ -51,6 +55,7 @@ public class EnemyAI : MonoBehaviour
         followingPath = false;
         targetLayer = LayerMask.NameToLayer("Player");
         InvokeRepeating("CheckTargetDetection", 0, 0.1f);
+        targetVitalityManager = target.gameObject.GetComponent<VitalityManager>();
     }
     private void BuildPathToTarget()
     {
@@ -61,7 +66,6 @@ public class EnemyAI : MonoBehaviour
     {
         if (!p.error)
         {
-            Debug.Log(p.vectorPath.Count);
             path = p;
             currentWaypoint = 0;
             followingPath = true;
@@ -70,12 +74,26 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        CheckTargetMemoryDetection();
-        CheckTargetDetection();
-        isTargetFollowable = isTargetInLOS || isTargetPositionMemorized;
-        if (allowPathPloting && isTargetFollowable) {
-            BuildPathToTarget();
+        if (GameManager.Instance.IsPlayerAlive)
+        {
+            CheckTargetMemoryDetection();
+            CheckTargetDetection();
+            isTargetFollowable = isTargetInLOS || isTargetPositionMemorized;
+            if (allowPathPloting && isTargetFollowable)
+            {
+                BuildPathToTarget();
+            }
         }
+        
+    }
+
+    private bool IsTargetDead()
+    {
+        if (targetVitalityManager != null && targetVitalityManager.Health.CurrentHealth == 0)
+        {
+            return true;
+        }
+        return false;
     }
 
     private void FixedUpdate()
@@ -107,10 +125,25 @@ public class EnemyAI : MonoBehaviour
 
     private bool CheckTargetDetection()
     {
+        if (!GameManager.Instance.IsPlayerAlive)
+            return false;
         directionToPlayer = (Vector2)(target.position - viewPoint.position);
         distanceToPlayer = directionToPlayer.magnitude;
         directionToPlayer.Normalize();
         angleToPlayer = Vector2.Angle(viewPoint.up, directionToPlayer);
+
+        if(distanceToPlayer <= guaranteedDetectionRadius)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(viewPoint.position, directionToPlayer, distanceToPlayer, hitableLayers);
+            if (hit.collider != null && hit.transform.gameObject.layer == targetLayer.value)
+            {
+                isTargetInLOS = true;
+                isTargetPositionMemorized = true;
+                lastSeenTargetTime = DateTime.Now;
+                OnTargetDetected(new TargetDetectedEventArgs(target));
+                return true;
+            }
+        }
 
         if (distanceToPlayer <= LOS_DetectionRange && angleToPlayer <= LOS_DetectionAngle)
         {

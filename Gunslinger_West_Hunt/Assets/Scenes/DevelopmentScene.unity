@@ -12319,6 +12319,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1068546482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7826389935521218939, guid: 348d69ae98a858a40bf3e1196a74dcfe, type: 3}
+  m_PrefabInstance: {fileID: 7826389936682506897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1198357221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12469,6 +12474,35 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7826389935521218918, guid: 348d69ae98a858a40bf3e1196a74dcfe, type: 3}
   m_PrefabInstance: {fileID: 7826389936682506897}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1573411844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068546482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39e1305cd8678b499521694184f9bdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterStats: {fileID: 11400000, guid: 115dd6348e67d044d8573ebbc3062f46, type: 2}
+--- !u!58 &1573411845
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068546482}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.02}
+  serializedVersion: 2
+  m_Radius: 0.63
 --- !u!1 &1680741974
 GameObject:
   m_ObjectHideFlags: 0
@@ -15573,6 +15607,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1573411831}
+    - target: {fileID: 940397802606265180, guid: 904d92e3c49df1e408005c0b7ae24b24, type: 3}
+      propertyPath: guaranteedDetectionRadius
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 904d92e3c49df1e408005c0b7ae24b24, type: 3}
 --- !u!1001 &2290767527115966451
@@ -16759,19 +16797,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3177370025156371337, guid: 348d69ae98a858a40bf3e1196a74dcfe, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3647112749645294371, guid: 348d69ae98a858a40bf3e1196a74dcfe, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7826389935260923963, guid: 348d69ae98a858a40bf3e1196a74dcfe, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7826389935324169711, guid: 348d69ae98a858a40bf3e1196a74dcfe, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826389935521218915, guid: 348d69ae98a858a40bf3e1196a74dcfe, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7826389935521218918, guid: 348d69ae98a858a40bf3e1196a74dcfe, type: 3}
       propertyPath: m_RootOrder

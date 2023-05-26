@@ -153,7 +153,7 @@ MonoBehaviour:
     m_Bits: 64
   charactersLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
   wallsPiercingCount: 0
   charactersPiercingCount: 0
 --- !u!60 &8193681193157061933

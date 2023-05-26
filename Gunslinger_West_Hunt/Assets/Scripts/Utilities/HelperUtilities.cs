@@ -241,13 +241,9 @@ public static class HelperUtilities
         return random.NextDouble() < probability;
     }
 
-    public static bool LayerContains(LayerMask layerMask, int layer)
+    public static bool IsInLayerMask(this GameObject gameObject, int layerMasks)
     {
-        if ((layerMask.value & (1 << layer)) > 0)
-        {
-            return true;
-        }
-        return false;
+        return (layerMasks == (layerMasks | (1 << gameObject.layer)));
     }
 
 }

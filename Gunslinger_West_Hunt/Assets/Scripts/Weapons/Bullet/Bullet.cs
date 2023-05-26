@@ -30,8 +30,6 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         bulletCollider = GetComponent<BoxCollider2D>();
-        //remainingWallPiercing = wallsPiercingCount;
-        //remainingCharactersPiercing = charactersPiercingCount;
     }
 
     public void ApplyProperties(WeaponStatsSO weaponStats)
@@ -56,7 +54,8 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (wallsLayer.value == 1 << collider.gameObject.layer)
+        //if (wallsLayer.value == 1 << collider.gameObject.layer)
+        if (collider.gameObject.IsInLayerMask(wallsLayer))
         {
             if(wallsPiercingCount > 0)
             {
@@ -69,7 +68,7 @@ public class Bullet : MonoBehaviour
             }
             OnWallHit(collider);
         }
-        if(charactersLayer.value == 1 << collider.gameObject.layer)
+        if(collider.gameObject.IsInLayerMask(charactersLayer))
         {
             if(charactersPiercingCount > 0)
             {
@@ -91,11 +90,11 @@ public class Bullet : MonoBehaviour
 
     private void OnCharacterHit(Collider2D collider)
     {
-        Debug.Log("Character Hit");
-        if (collider.gameObject.CompareTag("Enemy"))
+        if (collider.gameObject.CompareTag("Enemy") || collider.gameObject.CompareTag("Player"))
         {
             VitalityManager vitalityManager = collider.gameObject.GetComponent<VitalityManager>();
-            DealDamage(vitalityManager);
+            if (vitalityManager != null)
+                DealDamage(vitalityManager);
         }
     }
 
