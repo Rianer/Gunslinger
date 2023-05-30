@@ -16,7 +16,9 @@ MonoBehaviour:
   damageType: 0
   attackType: 0
   singleFire: 1
-  fireRate: 15
+  fireRate: 180
   bulletSpeed: 1
   damageArea: 0
   bulletType: 0
+  reloadTime_S: 1.5
+  magazineSize: 6

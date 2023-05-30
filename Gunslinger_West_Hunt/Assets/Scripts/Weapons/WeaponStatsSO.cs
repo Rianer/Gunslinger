@@ -13,4 +13,6 @@ public class WeaponStatsSO : ScriptableObject
     public float bulletSpeed = 0;
     public BulletDamageArea damageArea = BulletDamageArea.single;
     public BulletType bulletType = BulletType.common;
+    public float reloadTime_S;
+    public int magazineSize;
 }
