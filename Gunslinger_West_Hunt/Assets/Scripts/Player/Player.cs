@@ -21,9 +21,4 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
-
-    public void Initialize(PlayerCharactersiticsSO playerCharactersitics)
-    {
-        this.playerCharactersitics = playerCharactersitics;
-    }
 }

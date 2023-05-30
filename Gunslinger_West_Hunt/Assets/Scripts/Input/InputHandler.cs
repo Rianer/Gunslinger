@@ -21,13 +21,17 @@ public class InputHandler : MonoBehaviour, ISubject<InputObserverArgs>
 
     private void Update()
     {
-
+            
         HandleClickedFireB();
         horizontalAxisInput = Input.GetAxisRaw("Horizontal");
         verticalAxisInput = Input.GetAxisRaw("Vertical");
         Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 normalizedInputVector = new Vector2(horizontalAxisInput, verticalAxisInput).normalized;
-        NotifyObserver(new InputObserverArgs()
+
+        //Handle input only if player is alive
+        if (GameManager.Instance.IsPlayerAlive)
+
+            NotifyObserver(new InputObserverArgs()
             .Add(normalizedInputVector, cursorPosition)
             .Add(clickedButtons)
             );

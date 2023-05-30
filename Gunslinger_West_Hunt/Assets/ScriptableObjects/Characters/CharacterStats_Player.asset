@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CharacterStats_Player
   m_EditorClassIdentifier: 
   healthPoints: 20
-  armorPoints: 15
+  armorPoints: 1

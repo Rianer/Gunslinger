@@ -14,12 +14,21 @@ public class VitalityManager : MonoBehaviour
     public CharacterStatsSO CharacterStats { get => characterStats;}
     public Health Health { get => health;}
 
+    private GameManager gm;
+
     private void Start()
     {
+        gm = GameManager.Instance;
         health = new Health();
         armor = new Armor();
         health.SetStartingHealth(characterStats.healthPoints);
         armor.SetStartingArmor(characterStats.armorPoints);
+
+        if (gameObject.CompareTag("Player"))
+        {
+            gm.playerHealthBar.ApplyMaxHealth(health.StartingHealth);
+            UpdateGameManager();
+        }
     }
 
     public void ReceiveDamage(int amount)
@@ -33,11 +42,22 @@ public class VitalityManager : MonoBehaviour
             OnZeroHealth();
         }
         DebugStatus();
+        if (gameObject.CompareTag("Player"))
+        {
+            UpdateGameManager();
+        }
     }
 
     private void DebugStatus()
     {
         Debug.Log($"Health: {health.CurrentHealth}; Armor: {armor.CurrentArmor}");
+    }
+
+    private void UpdateGameManager()
+    {
+        gm.playerHealth = health.CurrentHealth;
+        gm.playerArmor = armor.CurrentArmor;
+        gm.playerHealthBar.SetHealth(health.CurrentHealth);
     }
 
     private void OnArmorBreak()
@@ -55,7 +75,7 @@ public class VitalityManager : MonoBehaviour
         }
         else
         {
-            GameManager.Instance.IsPlayerAlive = false;
+            gm.IsPlayerAlive = false;
             Debug.Log("Player Killed");
 
         }
