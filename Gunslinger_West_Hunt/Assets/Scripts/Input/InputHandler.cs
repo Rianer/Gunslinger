@@ -28,7 +28,6 @@ public class InputHandler : MonoBehaviour, ISubject<InputObserverArgs>
         Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 normalizedInputVector = new Vector2(horizontalAxisInput, verticalAxisInput).normalized;
 
-        //Handle input only if player is alive
         if (GameManager.Instance.IsPlayerAlive)
 
             NotifyObserver(new InputObserverArgs()

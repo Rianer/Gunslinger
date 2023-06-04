@@ -45,6 +45,8 @@ public class EnemyAI : MonoBehaviour
 
     private VitalityManager targetVitalityManager;
 
+    
+
     private void Start()
     {
         allowPathPloting = true;

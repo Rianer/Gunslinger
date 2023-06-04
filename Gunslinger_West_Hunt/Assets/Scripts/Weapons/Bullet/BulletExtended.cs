@@ -1,15 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using static UnityEditor.Experimental.GraphView.GraphView;
-
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
-public class Bullet : MonoBehaviour
+public class BulletExtended : MonoBehaviour
 {
     private Rigidbody2D rb;
     private BoxCollider2D bulletCollider;
@@ -19,6 +16,12 @@ public class Bullet : MonoBehaviour
     private float bulletSpeed;
     private BulletType bulletType;
     private BulletDamageArea damageArea;
+    public LayerMask wallsLayer;
+    public LayerMask charactersLayer;
+    public int wallsPiercingCount;
+    public int charactersPiercingCount;
+    private int remainingWallPiercing;
+    private int remainingCharactersPiercing;
 
     private void Awake()
     {
@@ -43,10 +46,43 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Instantiate(bulletHitSurfaceParticles, rb.position, Quaternion.identity);
-        OnCharacterHit(collision.collider);
-        Destroy(gameObject);   
+        Destroy(gameObject);
     }
 
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.IsInLayerMask(wallsLayer))
+        {
+            if (wallsPiercingCount > 0)
+            {
+                wallsPiercingCount--;
+                UpdateCollision(true, collider);
+            }
+            else
+            {
+                UpdateCollision(false, collider);
+            }
+            OnWallHit(collider);
+        }
+        if (collider.gameObject.IsInLayerMask(charactersLayer))
+        {
+            if (charactersPiercingCount > 0)
+            {
+                charactersPiercingCount--;
+                UpdateCollision(true, collider);
+            }
+            else
+            {
+                UpdateCollision(false, collider);
+            }
+            OnCharacterHit(collider);
+        }
+    }
+
+    private void UpdateCollision(bool ignoreCollision, Collider2D collider)
+    {
+        Physics2D.IgnoreCollision(bulletCollider, collider, ignoreCollision);
+    }
 
     private void OnCharacterHit(Collider2D collider)
     {
@@ -56,6 +92,11 @@ public class Bullet : MonoBehaviour
             if (vitalityManager != null)
                 DealDamage(vitalityManager);
         }
+    }
+
+    private void OnWallHit(Collider2D collider)
+    {
+        Debug.Log($"Wall Hit");
     }
 
     private void DealDamage(VitalityManager targetVitalityManager)
