@@ -189,13 +189,18 @@ MonoBehaviour:
   speed: 6
   nextWaypointDistance: 2.06
   movingDirection: 0
+  currentState: 0
   LOS_DetectionRange: 25
   LOS_DetectionAngle: 120
   viewPoint: {fileID: 940397803758379996}
   hitableLayers:
     serializedVersion: 2
     m_Bits: 1088
+  reachedPlayerDistance: 2
+  guaranteedDetectionRadius: 4
   targetMemoryMS: 2000
+  patrolPath: {fileID: 0}
+  isPatroller: 0
 --- !u!58 &940397802606265183
 CircleCollider2D:
   m_ObjectHideFlags: 0

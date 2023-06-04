@@ -60,3 +60,12 @@ public enum MovingDirection
     SE,
     SW
 }
+
+public enum AILogicState
+{
+    followingPath,
+    followingPlayer,
+    idle,
+    sleeping,
+    wandering
+}

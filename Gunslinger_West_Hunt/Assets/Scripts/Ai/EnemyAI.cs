@@ -2,6 +2,7 @@ using Pathfinding;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,6 +13,8 @@ public class EnemyAI : MonoBehaviour
     public float speed;
     public float nextWaypointDistance;
     public MovingDirection movingDirection;
+    public AILogicState currentState = AILogicState.idle;
+    private AILogicState idleState;
 
     #region LOS Detection
     public float LOS_DetectionRange;
@@ -21,6 +24,7 @@ public class EnemyAI : MonoBehaviour
     public LayerMask hitableLayers;
     private bool isTargetInLOS;
     public event EventHandler<TargetDetectedEventArgs> TargetDetected;
+    public float reachedPlayerDistance;
     #endregion
 
     #region Memory Following
@@ -31,7 +35,7 @@ public class EnemyAI : MonoBehaviour
 
     private Path path = null;
     private int currentWaypoint = 0;
-    private bool followingPath;
+    private bool followingPathToTarget;
     private bool allowPathPloting;
 
     private Seeker seeker;
@@ -45,23 +49,48 @@ public class EnemyAI : MonoBehaviour
 
     private VitalityManager targetVitalityManager;
 
-    
+    #region PATROL
+    [SerializeField]private PatrolPath patrolPath;
+    public bool isPatroller = false;
+    private DateTime stoppedFollowingTargetTime;
+    private Transform targetCheckPoint;
+    private bool patrolling = false;
+    #endregion
+
+
+    Vector2 directionToPlayer = new Vector2();
+    float distanceToPlayer = 0;
+    float angleToPlayer = 0;
+
+    public bool IsTargetDetected { get => isTargetInLOS; }
 
     private void Start()
     {
+        currentState = AILogicState.idle;
+        idleState = AILogicState.idle;
         allowPathPloting = true;
         lastSeenTargetTime = DateTime.Now;
         movingDirection = MovingDirection.N;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        followingPath = false;
+        followingPathToTarget = false;
         targetLayer = LayerMask.NameToLayer("Player");
         InvokeRepeating("CheckTargetDetection", 0, 0.1f);
         targetVitalityManager = target.gameObject.GetComponent<VitalityManager>();
+
+        if (isPatroller)
+        {
+            idleState = AILogicState.followingPath;
+            currentState = AILogicState.followingPath;
+            targetCheckPoint = patrolPath.GetStartingPoint();
+        }
     }
     private void BuildPathToTarget()
     {
-        seeker.StartPath(rb.position, target.position, OnPathComplete);
+        if (currentState == AILogicState.followingPlayer && allowPathPloting)
+            seeker.StartPath(rb.position, target.position, OnPathComplete);
+        else if (currentState == AILogicState.followingPath)
+            seeker.StartPath(rb.position, targetCheckPoint.position, OnPathComplete);
     }
 
     private void OnPathComplete(Path p)
@@ -70,7 +99,7 @@ public class EnemyAI : MonoBehaviour
         {
             path = p;
             currentWaypoint = 0;
-            followingPath = true;
+            followingPathToTarget = true;
         }
     }
 
@@ -81,37 +110,27 @@ public class EnemyAI : MonoBehaviour
             CheckTargetMemoryDetection();
             CheckTargetDetection();
             isTargetFollowable = isTargetInLOS || isTargetPositionMemorized;
-            if (allowPathPloting && isTargetFollowable)
+            if (isTargetFollowable)
             {
-                BuildPathToTarget();
+                currentState = AILogicState.followingPlayer;
+                ResetPatrolling();
             }
+            else if(isPatroller)
+            {
+                currentState = AILogicState.followingPath;
+            }
+            BuildPathToTarget();
         }
-        
-    }
-
-    private bool IsTargetDead()
-    {
-        if (targetVitalityManager != null && targetVitalityManager.Health.CurrentHealth == 0)
-        {
-            return true;
-        }
-        return false;
     }
 
     private void FixedUpdate()
     {
         //Idea implement different behaviors based on the enemy current state (following, returning to position, wandering)
-        if (followingPath)
+        if (followingPathToTarget)
         {
             FollowPathToTarget();
         }
     }
-
-    Vector2 directionToPlayer = new Vector2();
-    float distanceToPlayer = 0;
-    float angleToPlayer = 0;
-
-    public bool IsTargetDetected { get => isTargetInLOS;}
 
     /// <summary>
     /// If the time passed since last detection of the target is greater than the targetMemoryMS then the enemy forgets about the target
@@ -134,7 +153,8 @@ public class EnemyAI : MonoBehaviour
         directionToPlayer.Normalize();
         angleToPlayer = Vector2.Angle(viewPoint.up, directionToPlayer);
 
-        if(distanceToPlayer <= guaranteedDetectionRadius)
+        //Assured detection distance
+        if (distanceToPlayer <= guaranteedDetectionRadius)
         {
             RaycastHit2D hit = Physics2D.Raycast(viewPoint.position, directionToPlayer, distanceToPlayer, hitableLayers);
             if (hit.collider != null && hit.transform.gameObject.layer == targetLayer.value)
@@ -150,7 +170,6 @@ public class EnemyAI : MonoBehaviour
         if (distanceToPlayer <= LOS_DetectionRange && angleToPlayer <= LOS_DetectionAngle)
         {
             RaycastHit2D hit = Physics2D.Raycast(viewPoint.position, directionToPlayer, distanceToPlayer, hitableLayers);
-            Debug.DrawRay((Vector3)viewPoint.position, directionToPlayer * distanceToPlayer);
             if(hit.collider != null && hit.transform.gameObject.layer == targetLayer.value)
             {
                 isTargetInLOS = true;
@@ -160,6 +179,7 @@ public class EnemyAI : MonoBehaviour
                 return true;
             }
         }
+
         isTargetInLOS = false;
         return false;
     }
@@ -182,6 +202,12 @@ public class EnemyAI : MonoBehaviour
             currentWaypoint++;
         }
 
+        if(distanceToPlayer <= reachedPlayerDistance)
+        {
+            StopFollowingPath();
+            return;
+        }
+
         if (currentWaypoint >= path.vectorPath.Count)
         {
             StopFollowingPath();
@@ -191,16 +217,36 @@ public class EnemyAI : MonoBehaviour
 
     private void StopFollowingPath()
     {
-        rb.velocity = Vector2.zero;
-        RefreshCurrentPath();
+        if(currentState == AILogicState.followingPlayer)
+        {
+            rb.velocity = Vector2.zero;
+            currentState = idleState;
+            stoppedFollowingTargetTime = DateTime.Now;
+            RefreshCurrentPath();
+        }
+        else if(currentState == AILogicState.followingPath)
+        {
+            targetCheckPoint = patrolPath.GetNextCheckPoint();
+            BuildPathToTarget();
+        }
     }
 
     private void RefreshCurrentPath()
     {
         path = null;
         currentWaypoint = 0;
-        followingPath = false;
+        if(currentState == AILogicState.followingPlayer)
+            followingPathToTarget = false;
         allowPathPloting = true;
+    }
+
+    private void ResetPatrolling()
+    {
+        if (isPatroller)
+        {
+            targetCheckPoint = patrolPath.GetStartingPoint();
+            patrolling = false;
+        }
     }
 
     protected virtual void OnTargetDetected(TargetDetectedEventArgs e)

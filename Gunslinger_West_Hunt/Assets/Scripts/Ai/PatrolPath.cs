@@ -27,6 +27,17 @@ public class PatrolPath : MonoBehaviour
         }
     }
 
+    public Transform GetStartingPoint()
+    {
+        if(currentCheckPointIndex != -1)
+        {
+            currentCheckPointIndex = 0;
+            nextCheckPointIndex = currentCheckPointIndex + 1;
+            return checkPoints[currentCheckPointIndex];
+        }
+        return null;
+    }
+
     public Transform GetNextCheckPoint()
     {
         currentCheckPointIndex = nextCheckPointIndex;
