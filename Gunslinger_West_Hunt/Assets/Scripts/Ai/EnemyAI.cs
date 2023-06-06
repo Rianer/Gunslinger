@@ -89,8 +89,12 @@ public class EnemyAI : MonoBehaviour
     {
         if (currentState == AILogicState.followingPlayer && allowPathPloting)
             seeker.StartPath(rb.position, target.position, OnPathComplete);
-        else if (currentState == AILogicState.followingPath)
+        else if (currentState == AILogicState.followingPath && allowPathPloting)
+        {
+            Debug.Log($"Building path to checkpoint {targetCheckPoint.position}");
             seeker.StartPath(rb.position, targetCheckPoint.position, OnPathComplete);
+        }
+            
     }
 
     private void OnPathComplete(Path p)
@@ -100,25 +104,35 @@ public class EnemyAI : MonoBehaviour
             path = p;
             currentWaypoint = 0;
             followingPathToTarget = true;
+            Debug.Log("Path completed");
         }
     }
 
     private void Update()
     {
+        if (Input.GetKeyDown("o"))
+        {
+            targetCheckPoint = patrolPath.GetStartingPoint();
+            Debug.Log(targetCheckPoint.position);
+        }
+        if (Input.GetKeyDown("k"))
+        {
+            targetCheckPoint = patrolPath.GetNextCheckPoint();
+            Debug.Log(targetCheckPoint.position);
+        }
         if (GameManager.Instance.IsPlayerAlive)
         {
             CheckTargetMemoryDetection();
-            CheckTargetDetection();
             isTargetFollowable = isTargetInLOS || isTargetPositionMemorized;
-            if (isTargetFollowable)
-            {
-                currentState = AILogicState.followingPlayer;
-                ResetPatrolling();
-            }
-            else if(isPatroller)
+            if (isPatroller)
             {
                 currentState = AILogicState.followingPath;
             }
+            if (isTargetFollowable)
+            {
+                currentState = AILogicState.followingPlayer;
+            }
+
             BuildPathToTarget();
         }
     }
@@ -129,6 +143,10 @@ public class EnemyAI : MonoBehaviour
         if (followingPathToTarget)
         {
             FollowPathToTarget();
+        }
+        else
+        {
+            Debug.Log("Cannot follow");
         }
     }
 
@@ -159,10 +177,7 @@ public class EnemyAI : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(viewPoint.position, directionToPlayer, distanceToPlayer, hitableLayers);
             if (hit.collider != null && hit.transform.gameObject.layer == targetLayer.value)
             {
-                isTargetInLOS = true;
-                isTargetPositionMemorized = true;
-                lastSeenTargetTime = DateTime.Now;
-                OnTargetDetected(new TargetDetectedEventArgs(target));
+                HandleTargetDetected();
                 return true;
             }
         }
@@ -172,10 +187,7 @@ public class EnemyAI : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(viewPoint.position, directionToPlayer, distanceToPlayer, hitableLayers);
             if(hit.collider != null && hit.transform.gameObject.layer == targetLayer.value)
             {
-                isTargetInLOS = true;
-                isTargetPositionMemorized = true;
-                lastSeenTargetTime = DateTime.Now;
-                OnTargetDetected(new TargetDetectedEventArgs(target));
+                HandleTargetDetected();
                 return true;
             }
         }
@@ -184,13 +196,29 @@ public class EnemyAI : MonoBehaviour
         return false;
     }
 
+    private void HandleTargetDetected()
+    {
+        isTargetInLOS = true;
+        isTargetPositionMemorized = true;
+        lastSeenTargetTime = DateTime.Now;
+        OnTargetDetected(new TargetDetectedEventArgs(target));
+        if (currentState == AILogicState.followingPath) {
+            ResetPatrolling();
+            currentState = AILogicState.followingPlayer;
+        }
+    }
+
     private void FollowPathToTarget()
     {
-        if(allowPathPloting)
+        if (allowPathPloting)
             allowPathPloting = false;
         Vector2 movementVector = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         movingDirection = MovingDirectionHelper.detectMovingDirection(movementVector);
-        Vector2 lookDirection = (Vector2)target.position - rb.position;
+        Vector2 lookDirection = Vector2.zero;
+        if (currentState == AILogicState.followingPlayer)
+            lookDirection = (Vector2)target.position - rb.position;
+        else if(currentState == AILogicState.followingPath)
+            lookDirection = (Vector2)targetCheckPoint.position - rb.position;
         Vector2 velocity = movementVector * speed;
         rb.velocity = velocity;
         rb.rotation = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90;
@@ -217,6 +245,7 @@ public class EnemyAI : MonoBehaviour
 
     private void StopFollowingPath()
     {
+        followingPathToTarget = false;
         if(currentState == AILogicState.followingPlayer)
         {
             rb.velocity = Vector2.zero;
@@ -226,6 +255,8 @@ public class EnemyAI : MonoBehaviour
         }
         else if(currentState == AILogicState.followingPath)
         {
+            rb.velocity = Vector2.zero;
+            allowPathPloting = true;
             targetCheckPoint = patrolPath.GetNextCheckPoint();
             BuildPathToTarget();
         }
@@ -245,7 +276,7 @@ public class EnemyAI : MonoBehaviour
         if (isPatroller)
         {
             targetCheckPoint = patrolPath.GetStartingPoint();
-            patrolling = false;
+            StopFollowingPath();
         }
     }
 
