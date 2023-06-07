@@ -19,11 +19,15 @@ public class Bullet : MonoBehaviour
     private float bulletSpeed;
     private BulletType bulletType;
     private BulletDamageArea damageArea;
+    public int semiObstacleLayer;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         bulletCollider = GetComponent<BoxCollider2D>();
+        Physics2D.IgnoreLayerCollision(gameObject.layer, semiObstacleLayer);
+        Physics2D.IgnoreLayerCollision(gameObject.layer, gameObject.layer);
+
     }
 
     public void ApplyProperties(WeaponStatsSO weaponStats)
@@ -44,6 +48,7 @@ public class Bullet : MonoBehaviour
     {
         Instantiate(bulletHitSurfaceParticles, rb.position, Quaternion.identity);
         OnCharacterHit(collision.collider);
+        Debug.Log(collision.gameObject.layer == 13);
         Destroy(gameObject);   
     }
 

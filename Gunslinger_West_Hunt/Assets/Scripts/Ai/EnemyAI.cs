@@ -91,7 +91,6 @@ public class EnemyAI : MonoBehaviour
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         else if (currentState == AILogicState.followingPath && allowPathPloting)
         {
-            Debug.Log($"Building path to checkpoint {targetCheckPoint.position}");
             seeker.StartPath(rb.position, targetCheckPoint.position, OnPathComplete);
         }
             
@@ -104,7 +103,6 @@ public class EnemyAI : MonoBehaviour
             path = p;
             currentWaypoint = 0;
             followingPathToTarget = true;
-            Debug.Log("Path completed");
         }
     }
 
@@ -143,10 +141,6 @@ public class EnemyAI : MonoBehaviour
         if (followingPathToTarget)
         {
             FollowPathToTarget();
-        }
-        else
-        {
-            Debug.Log("Cannot follow");
         }
     }
 

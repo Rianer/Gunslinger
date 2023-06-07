@@ -34,6 +34,12 @@ public class InputHandler : MonoBehaviour, ISubject<InputObserverArgs>
             .Add(normalizedInputVector, cursorPosition)
             .Add(clickedButtons)
             );
+        else
+        {
+            NotifyObserver(new InputObserverArgs()
+            .Add(Vector2.zero, Vector2.zero)
+            .Add(new ClickedButtons()));
+        }
     }
 
     public Vector2 GetInputValues()
