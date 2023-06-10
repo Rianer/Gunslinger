@@ -54,7 +54,6 @@ public class EnemyAI : MonoBehaviour
     public bool isPatroller = false;
     private DateTime stoppedFollowingTargetTime;
     private Transform targetCheckPoint;
-    private bool patrolling = false;
     #endregion
 
 

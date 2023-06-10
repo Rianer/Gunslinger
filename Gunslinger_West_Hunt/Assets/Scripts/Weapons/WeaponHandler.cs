@@ -6,8 +6,15 @@ public class WeaponHandler : MonoBehaviour, IObserver<InputObserverArgs>
 {
     private Vector2 crosshairCoordinates;
     private ClickedButtons clickedButtons;
-    [SerializeField]private Weapon equipedWeapon = null;
+    private Weapon equipedWeapon;
+    [SerializeField] private Transform weaponAnchorPoint = null;
     private bool allowAttack = true;
+
+    public void EquipWeapon()
+    {
+        GameObject weaponObject = weaponAnchorPoint.GetChild(0).gameObject;
+        equipedWeapon = weaponObject.transform.GetChild(0).gameObject.GetComponent<Weapon>();
+    }
 
     public void UpdateObserver(InputObserverArgs args)
     {

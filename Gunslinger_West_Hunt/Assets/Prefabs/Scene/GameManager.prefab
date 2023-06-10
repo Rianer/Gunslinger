@@ -48,3 +48,4 @@ MonoBehaviour:
   playerArmor: 0
   playerHealthBar: {fileID: 0}
   player: {fileID: 0}
+  playerLoadout: {fileID: 11400000, guid: fb221aa361df3df4eb3bd0619c6fc245, type: 2}

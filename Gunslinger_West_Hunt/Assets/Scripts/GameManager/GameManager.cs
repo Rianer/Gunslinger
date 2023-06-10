@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public bool IsPlayerAlive { get => isPlayerAlive; set => isPlayerAlive = value; }
-    public GameObject Player { get => player;}
+    public GameObject Player { get => player; }
 
     public int playerHealth;
     public int playerArmor;
@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     private Vector2 playerPosition;
     private bool isPlayerAlive;
     [SerializeField] private GameObject player;
+
+    public LoadoutSO playerLoadout;
 
     private void Awake()
     {
@@ -36,4 +38,6 @@ public class GameManager : MonoBehaviour
     {
         Destroy(player);
     }
+
+
 }

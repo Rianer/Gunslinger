@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ab41961d1640d42897f1ebcd58c4b6, type: 3}
+  m_Name: Loadout_DevDefault
+  m_EditorClassIdentifier: 
+  gunPrefab: {fileID: 5152138835734268787, guid: 5fd075c96e9f3ff43bb189937922440c, type: 3}
+  test: This is good
