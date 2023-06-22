@@ -15,4 +15,5 @@ public class WeaponStatsSO : ScriptableObject
     public BulletType bulletType = BulletType.common;
     public float reloadTime_S;
     public int magazineSize;
+    public int ignoreLayer;
 }

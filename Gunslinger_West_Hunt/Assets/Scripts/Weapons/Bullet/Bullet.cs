@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 [DisallowMultipleComponent]
@@ -35,6 +36,7 @@ public class Bullet : MonoBehaviour
         damageArea = weaponStats.damageArea;
         bulletSpeed = weaponStats.bulletSpeed;
         bulletType = weaponStats.bulletType;
+        //Physics2D.IgnoreLayerCollision(this.gameObject.layer, weaponStats.ignoreLayer);
     }
 
     public void Fire(Vector3 direction)
@@ -46,7 +48,6 @@ public class Bullet : MonoBehaviour
     {
         Instantiate(bulletHitSurfaceParticles, rb.position, Quaternion.identity);
         OnCharacterHit(collision.collider);
-        Debug.Log(collision.gameObject.layer == 13);
         Destroy(gameObject);   
     }
 
