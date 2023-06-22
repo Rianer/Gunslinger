@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07ab41961d1640d42897f1ebcd58c4b6, type: 3}
-  m_Name: Loadout_DevDefault
+  m_Script: {fileID: 11500000, guid: fa4510fb04828a749958b36739b28754, type: 3}
+  m_Name: WeaponUnlocks
   m_EditorClassIdentifier: 
-  gunPrefab: {fileID: 5152138835734268787, guid: 5fd075c96e9f3ff43bb189937922440c, type: 3}
-  test: This is good
+  unlockedWeapons: []

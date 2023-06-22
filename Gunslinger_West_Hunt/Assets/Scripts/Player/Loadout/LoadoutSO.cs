@@ -7,5 +7,9 @@ using UnityEngine;
 public class LoadoutSO : ScriptableObject
 {
     public GameObject gunPrefab;
-    public string test;
+
+    public Sprite equipedWeaponImage;
+    public string equipedWeaponName;
+
+    public int playerMoney;
 }
