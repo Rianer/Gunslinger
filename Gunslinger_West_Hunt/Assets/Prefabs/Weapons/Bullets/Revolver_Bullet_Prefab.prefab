@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletHitSurfaceParticles: {fileID: 3892782158060977476, guid: 5bc013aec1240c24b90ae96d7ef342b3, type: 3}
   semiObstacleLayer: 13
+  ignoreLayer: 10
 --- !u!60 &8193681193157061933
 PolygonCollider2D:
   m_ObjectHideFlags: 0

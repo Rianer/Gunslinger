@@ -17,11 +17,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject player;
 
     public LoadoutSO playerLoadout;
+    public int remainingTargets;
+    public LevelMetaSO levelMeta;
+    public bool levelWon;
 
     private void Awake()
     {
+        Debug.Log($"Entered the level {levelMeta.levelName}");
         Instance = this;
         IsPlayerAlive = true;
+        levelWon = false;
+        remainingTargets = levelMeta.targets;
     }
 
     public void UpdatePlayerPosition(Vector2 newPosition)
@@ -37,6 +43,30 @@ public class GameManager : MonoBehaviour
     public void KillPlayer()
     {
         Destroy(player);
+    }
+
+    public void CheckWinCondition()
+    {
+        if(remainingTargets == 0)
+        {
+            levelWon = true;
+            Debug.Log("Level Cleared");
+        }
+    }
+
+    public void OnLevelExit()
+    {
+        Inventory inventory = Inventory.GetInstance();
+        int totalReward = levelMeta.levelReward;
+        foreach(KeyValuePair<ItemDetailSO, int> entry in inventory.GetInventoryItems())
+        {
+            if(entry.Key.type == ItemType.bounty)
+            {
+                totalReward += entry.Key.value * entry.Value;
+            }
+        }
+        playerLoadout.playerMoney += totalReward;
+        Debug.Log($"Player Gained {totalReward}");
     }
 
 

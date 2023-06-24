@@ -15,10 +15,8 @@ public enum GameState
 public enum DamageType
 {
     kinetic,
-    burn,
-    electrical,
-    chemical,
-    spiritual
+    spiritual,
+    elemental
 }
 
 public enum WeaponAttackType

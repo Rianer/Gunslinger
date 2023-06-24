@@ -14,21 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: DevelopmentScene
   levelTitle: Tutorial
-  levelDescription: 'This is just
-
-    A
-
-    W
-
-    E
-
-    S
-
-    O
-
-    M
-
-    E!'
+  levelDescription: "\tThis is your first challenge!"
   thumbnail: {fileID: 0}
   levelPassed: 0
   levelAvailable: 1
+  reward: 200
+  targets: 3

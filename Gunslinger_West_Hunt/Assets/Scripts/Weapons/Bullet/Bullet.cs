@@ -36,7 +36,6 @@ public class Bullet : MonoBehaviour
         damageArea = weaponStats.damageArea;
         bulletSpeed = weaponStats.bulletSpeed;
         bulletType = weaponStats.bulletType;
-        //Physics2D.IgnoreLayerCollision(this.gameObject.layer, weaponStats.ignoreLayer);
     }
 
     public void Fire(Vector3 direction)
@@ -65,7 +64,7 @@ public class Bullet : MonoBehaviour
     private void DealDamage(VitalityManager targetVitalityManager)
     {
         //TODO: calculate complex damage model
-        targetVitalityManager.ReceiveDamage(damage);
+        targetVitalityManager.ReceiveDamage(damage, damageType);
 
     }
 }

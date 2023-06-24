@@ -9,7 +9,7 @@ public class ItemDetailSO : ScriptableObject
     public Sprite inGameSprite;
     public Sprite inventorySprite;
     public float weight;
-    public float value;
+    public int value;
     public string itemName;
     public ItemType type;
     public int armor;
