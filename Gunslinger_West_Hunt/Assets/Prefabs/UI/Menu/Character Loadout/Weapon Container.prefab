@@ -94,6 +94,7 @@ MonoBehaviour:
   weaponPrice: 300
   weaponDescription: {fileID: 2986747214350945746}
   isUnlocked: 0
+  isEquiped: 0
   loadoutSelector: {fileID: 0}
 --- !u!1 &2986747214310759266
 GameObject:
@@ -331,10 +332,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.7027411, g: 0.5728907, b: 0.7735849, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.3584906, g: 0.20799218, b: 0.22935237, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:

@@ -9,8 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa4510fb04828a749958b36739b28754, type: 3}
-  m_Name: WeaponUnlocks
+  m_Script: {fileID: 11500000, guid: 99140cef1b8e0ad4e97e42865fb80d26, type: 3}
+  m_Name: WeaponStats_Rifle
   m_EditorClassIdentifier: 
-  unlockedWeapons:
-  - Revolver
+  damage: 7
+  damageType: 1
+  attackType: 0
+  singleFire: 1
+  fireRate: 140
+  bulletSpeed: 1
+  damageArea: 0
+  bulletType: 0
+  reloadTime_S: 4
+  magazineSize: 8
+  ignoreLayer: 10

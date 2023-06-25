@@ -16,7 +16,7 @@ MonoBehaviour:
   damageType: 0
   attackType: 0
   singleFire: 1
-  fireRate: 180
+  fireRate: 240
   bulletSpeed: 1
   damageArea: 0
   bulletType: 0

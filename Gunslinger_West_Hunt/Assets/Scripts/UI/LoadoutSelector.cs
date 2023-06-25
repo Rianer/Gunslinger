@@ -10,12 +10,15 @@ public class LoadoutSelector : MonoBehaviour
     public WeaponUnlocksSO weaponUnlocks;
     [SerializeField] private Image selectedWeaponImage;
     [SerializeField] private TextMeshProUGUI selectedWeaponName;
+    [SerializeField] private TextMeshProUGUI moneyDisplay;
 
     private void Start()
     {
+        UpdateMoneyDisplay();
         selectedWeaponImage.sprite = playerLoadout.equipedWeaponImage;
         selectedWeaponName.text = playerLoadout.equipedWeaponName;
-        weaponUnlocks.unlockedWeapons.Add(playerLoadout.equipedWeaponName);
+        if(!weaponUnlocks.unlockedWeapons.Contains(playerLoadout.equipedWeaponName))
+            weaponUnlocks.unlockedWeapons.Add(playerLoadout.equipedWeaponName);
     }
     public void EquipWeapon(GameObject newWeapon, Image image, string name)
     {
@@ -35,7 +38,26 @@ public class LoadoutSelector : MonoBehaviour
             return false;
 
         playerLoadout.playerMoney -= price;
-        weaponUnlocks.unlockedWeapons.Add(weaponName);
+        UpdateMoneyDisplay();
+        if (!weaponUnlocks.unlockedWeapons.Contains(playerLoadout.equipedWeaponName))
+            weaponUnlocks.unlockedWeapons.Add(weaponName);
         return true;
     }
+
+
+    private void UpdateMoneyDisplay()
+    {
+        string value = playerLoadout.playerMoney.ToString();
+        moneyDisplay.text = $"${value}";
+    }
+
+    public int GetPlayerMoney()
+    {
+        return playerLoadout.playerMoney;
+    }
+
+    //public string GetEquipedWeaponName()
+    //{
+    //    return playerLoadout.equipedWeaponName;
+    //}
 }

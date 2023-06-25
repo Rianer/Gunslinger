@@ -11,6 +11,7 @@ public class WeaponPicker : MonoBehaviour
     public int weaponPrice;
     public TextMeshProUGUI weaponDescription;
     public bool isUnlocked;
+    public bool isEquiped = false;
     public LoadoutSelector loadoutSelector;
 
     private Image weaponImage;
@@ -18,6 +19,7 @@ public class WeaponPicker : MonoBehaviour
     {
         CheckUnlock();
         weaponImage = GetComponent<Image>();
+
     }
 
     private void BuyWeapon()
@@ -37,8 +39,25 @@ public class WeaponPicker : MonoBehaviour
 
     private void CheckUnlock()
     {
+        //if (loadoutSelector.GetEquipedWeaponName() == weaponName)
+        //{
+        //    isUnlocked = true;
+        //    weaponDescription.text = "Equiped";
+        //    weaponDescription.color = new Color32(162, 112, 255, 255);
+        //    return;
+        //}
+
         isUnlocked = false;
-        weaponDescription.text = "Buy Weapon";
+        if(weaponPrice > loadoutSelector.GetPlayerMoney())
+        {
+            weaponDescription.text = "No Money";
+            //weaponDescription.gameObject.GetComponent<Button>().enabled = false;
+        }
+        else
+        {
+            weaponDescription.text = "Buy Weapon";
+            //weaponDescription.gameObject.GetComponent<Button>().enabled = true;
+        }
         if (loadoutSelector.weaponUnlocks.unlockedWeapons.Contains(weaponName))
         {
             isUnlocked = true;
@@ -52,10 +71,12 @@ public class WeaponPicker : MonoBehaviour
         if (isUnlocked)
         {
             EquipWeapon();
+            CheckUnlock();
         }
         else
         {
             BuyWeapon();
+            CheckUnlock();
         }
     }
 }
