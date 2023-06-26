@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39e686441cb9aec4187f14229a9ccfb3, type: 3}
-  m_Name: Dev_Level_Parameters
+  m_Name: Level1_Parameters
   m_EditorClassIdentifier: 
-  sceneName: DevelopmentScene
-  levelTitle: Tutorial
-  levelDescription: "\tThis is your first challenge!"
+  sceneName: Level1
+  levelTitle: The First Hunt
+  levelDescription: 'This is your first hunt, try not to die on your first day of
+    work. '
   thumbnail: {fileID: 0}
-  levelPassed: 1
+  levelPassed: 0
   levelAvailable: 1
-  nextLevelUnlock: The First Hunt
-  reward: 100
+  nextLevelUnlock: 
+  reward: 150
   targets: 1
