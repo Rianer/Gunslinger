@@ -278,7 +278,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 56983066}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2146120488}
+        m_TargetAssemblyTypeName: LevelEndManager, Assembly-CSharp
+        m_MethodName: GoToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &56983066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12386,7 +12398,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 309951037}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2146120488}
+        m_TargetAssemblyTypeName: LevelEndManager, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &309951037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12735,7 +12759,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 13.37212, y: 16.271576}
+  m_Offset: {x: 10.948804, y: 15.423418}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -12746,7 +12770,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.5006485, y: 6.1065044}
+  m_Size: {x: 2.431116, y: 4.006298}
   m_EdgeRadius: 0
 --- !u!4 &646598176
 Transform:
@@ -12756,7 +12780,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 646598173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.86, y: -7.76, z: -0.74064696}
+  m_LocalPosition: {x: -16.58, y: -15.31, z: -0.74064696}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13228,6 +13252,10 @@ PrefabInstance:
     - target: {fileID: 940397802606265180, guid: 904d92e3c49df1e408005c0b7ae24b24, type: 3}
       propertyPath: isPatroller
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333664714262135500, guid: 904d92e3c49df1e408005c0b7ae24b24, type: 3}
+      propertyPath: isTarget
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6333664714262135500, guid: 904d92e3c49df1e408005c0b7ae24b24, type: 3}
       propertyPath: droppableItems.Array.size
@@ -16293,9 +16321,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endScreen: {fileID: 237034635}
-  levelName: {fileID: 0}
-  status: {fileID: 0}
-  money: {fileID: 0}
+  levelName: {fileID: 552798057}
+  status: {fileID: 147740081}
+  money: {fileID: 2003514050}
 --- !u!1001 &940397803734834753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16366,6 +16394,10 @@ PrefabInstance:
     - target: {fileID: 940397802606265180, guid: 904d92e3c49df1e408005c0b7ae24b24, type: 3}
       propertyPath: isPatroller
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333664714262135500, guid: 904d92e3c49df1e408005c0b7ae24b24, type: 3}
+      propertyPath: isTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 904d92e3c49df1e408005c0b7ae24b24, type: 3}
@@ -16441,6 +16473,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1596475243}
+    - target: {fileID: 3300242149853215121, guid: e6e53f1d9ef07c043a9a20a0ba860e02, type: 3}
+      propertyPath: levelEndManager
+      value: 
+      objectReference: {fileID: 2146120488}
     - target: {fileID: 3300242149853215121, guid: e6e53f1d9ef07c043a9a20a0ba860e02, type: 3}
       propertyPath: playerHealthBar
       value: 

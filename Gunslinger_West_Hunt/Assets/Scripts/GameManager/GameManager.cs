@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public LevelMetaSO levelMeta;
     public bool levelWon;
 
+    public LevelEndManager levelEndManager;
+
     private void Awake()
     {
         Debug.Log($"Entered the level {levelMeta.levelName}");
@@ -43,6 +45,9 @@ public class GameManager : MonoBehaviour
     public void KillPlayer()
     {
         Destroy(player);
+        Inventory.GetInstance().GetInventoryItems().Clear();
+        levelEndManager.InitiateEndScreen(levelMeta.levelName, "You Died!", "0", levelMeta.sceneName);
+
     }
 
     public void CheckWinCondition()
@@ -67,6 +72,10 @@ public class GameManager : MonoBehaviour
         }
         playerLoadout.playerMoney += totalReward;
         Debug.Log($"Player Gained {totalReward}");
+        levelEndManager.InitiateEndScreen(levelMeta.levelName, "Level Won!", $"${totalReward}", levelMeta.sceneName);
+        isPlayerAlive = false;
+        levelMeta.RecordPassedLevel(levelMeta.levelName);
+        levelMeta.isNextLevelUnlocked = true;
     }
 
 

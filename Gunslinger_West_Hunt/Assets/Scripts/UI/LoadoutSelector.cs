@@ -11,6 +11,7 @@ public class LoadoutSelector : MonoBehaviour
     [SerializeField] private Image selectedWeaponImage;
     [SerializeField] private TextMeshProUGUI selectedWeaponName;
     [SerializeField] private TextMeshProUGUI moneyDisplay;
+    [SerializeField] private TextMeshProUGUI weaponDescription;
 
     private void Start()
     {
@@ -39,8 +40,7 @@ public class LoadoutSelector : MonoBehaviour
 
         playerLoadout.playerMoney -= price;
         UpdateMoneyDisplay();
-        if (!weaponUnlocks.unlockedWeapons.Contains(playerLoadout.equipedWeaponName))
-            weaponUnlocks.unlockedWeapons.Add(weaponName);
+        weaponUnlocks.unlockedWeapons.Add(weaponName);
         return true;
     }
 
@@ -56,8 +56,8 @@ public class LoadoutSelector : MonoBehaviour
         return playerLoadout.playerMoney;
     }
 
-    //public string GetEquipedWeaponName()
-    //{
-    //    return playerLoadout.equipedWeaponName;
-    //}
+    public void UpdateWeaponDescription(string description)
+    {
+        weaponDescription.text = description;
+    }
 }

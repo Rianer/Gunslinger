@@ -15,7 +15,7 @@ public class LevelEscape : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-
+            CheckEscape();
         }
     }
 

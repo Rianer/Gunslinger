@@ -18,5 +18,6 @@ MonoBehaviour:
   thumbnail: {fileID: 0}
   levelPassed: 0
   levelAvailable: 1
+  nextLevelUnlock: 
   reward: 200
-  targets: 3
+  targets: 1

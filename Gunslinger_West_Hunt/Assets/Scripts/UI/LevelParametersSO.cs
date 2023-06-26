@@ -13,6 +13,7 @@ public class LevelParametersSO : ScriptableObject
     public SpriteRenderer thumbnail;
     public bool levelPassed = false;
     public bool levelAvailable = false;
+    public string nextLevelUnlock = string.Empty;
 
     public int reward = 0;
     public int targets = 0;

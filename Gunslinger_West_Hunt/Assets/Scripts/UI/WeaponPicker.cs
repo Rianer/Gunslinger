@@ -13,6 +13,8 @@ public class WeaponPicker : MonoBehaviour
     public bool isUnlocked;
     public bool isEquiped = false;
     public LoadoutSelector loadoutSelector;
+    [TextArea(15, 20)]
+    public string description;
 
     private Image weaponImage;
     private void Start()
@@ -78,5 +80,15 @@ public class WeaponPicker : MonoBehaviour
             BuyWeapon();
             CheckUnlock();
         }
+    }
+
+    public void ShowDescriprion()
+    {
+        loadoutSelector.UpdateWeaponDescription(description);
+    }
+
+    public void ClearDescription()
+    {
+        loadoutSelector.UpdateWeaponDescription("");
     }
 }

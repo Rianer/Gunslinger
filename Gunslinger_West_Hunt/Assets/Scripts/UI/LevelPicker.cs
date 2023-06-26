@@ -16,13 +16,22 @@ public class LevelPicker : MonoBehaviour
 
     private void Start()
     {
+        if (levelMeta.isNextLevelUnlocked && levelMeta.nextLevel == levelParameters.levelTitle)
+        {
+            levelParameters.levelAvailable = true;
+        }
         button = GetComponent<Button>();
         GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         button.interactable = levelParameters.levelAvailable;
+        if (levelMeta.HasRecordedLevel(levelParameters.levelTitle))
+        {
+            levelParameters.levelPassed = true;
+        }
         if (levelParameters.levelPassed)
         {
             GetComponent<Image>().color = new Color32(180, 180, 180, 255);
         }
+        
         
     }
 
@@ -37,6 +46,9 @@ public class LevelPicker : MonoBehaviour
         levelMeta.targets = levelParameters.targets;
         levelMeta.levelReward = levelParameters.reward;
         levelMeta.levelName = levelParameters.levelTitle;
+        levelMeta.sceneName = levelParameters.sceneName;
+        levelMeta.nextLevel = levelParameters.nextLevelUnlock;
+        levelMeta.isNextLevelUnlocked = false;
     }
 
     

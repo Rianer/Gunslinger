@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b295c9422b6c2ae46adaacce768aa487, type: 3}
   m_Name: LevelMeta
   m_EditorClassIdentifier: 
-  levelName: level
-  levelReward: 0
+  levelName: Tutorial
+  levelReward: 200
   targets: 1
+  sceneName: DevelopmentScene
