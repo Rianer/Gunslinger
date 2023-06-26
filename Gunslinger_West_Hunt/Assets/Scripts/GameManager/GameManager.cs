@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public LevelMetaSO levelMeta;
     public bool levelWon;
 
+    public Sprite deadPlayerSprite;
+
     public LevelEndManager levelEndManager;
 
     private void Awake()
@@ -44,7 +46,8 @@ public class GameManager : MonoBehaviour
 
     public void KillPlayer()
     {
-        Destroy(player);
+        //Destroy(player);
+        player.GetComponent<SpriteRenderer>().sprite = deadPlayerSprite;
         Inventory.GetInstance().GetInventoryItems().Clear();
         levelEndManager.InitiateEndScreen(levelMeta.levelName, "You Died!", "0", levelMeta.sceneName);
 

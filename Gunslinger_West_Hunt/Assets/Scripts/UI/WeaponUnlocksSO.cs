@@ -5,6 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WeaponUnlocks", menuName = "Scriptable Objects/Loadout/Weapon Unlocks")]
 public class WeaponUnlocksSO : ScriptableObject
 {
-    public List<string> unlockedWeapons = new List<string>();
+    public List<string> unlockedWeapons;
 
 }

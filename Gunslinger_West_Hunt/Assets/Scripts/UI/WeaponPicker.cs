@@ -41,24 +41,14 @@ public class WeaponPicker : MonoBehaviour
 
     private void CheckUnlock()
     {
-        //if (loadoutSelector.GetEquipedWeaponName() == weaponName)
-        //{
-        //    isUnlocked = true;
-        //    weaponDescription.text = "Equiped";
-        //    weaponDescription.color = new Color32(162, 112, 255, 255);
-        //    return;
-        //}
-
         isUnlocked = false;
         if(weaponPrice > loadoutSelector.GetPlayerMoney())
         {
             weaponDescription.text = "No Money";
-            //weaponDescription.gameObject.GetComponent<Button>().enabled = false;
         }
         else
         {
             weaponDescription.text = "Buy Weapon";
-            //weaponDescription.gameObject.GetComponent<Button>().enabled = true;
         }
         if (loadoutSelector.weaponUnlocks.unlockedWeapons.Contains(weaponName))
         {

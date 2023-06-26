@@ -16,10 +16,10 @@ MonoBehaviour:
   damageType: 0
   attackType: 0
   singleFire: 1
-  fireRate: 150
+  fireRate: 300
   bulletSpeed: 1
   damageArea: 0
   bulletType: 0
-  reloadTime_S: 10
+  reloadTime_S: 3
   magazineSize: 4
   ignoreLayer: 8

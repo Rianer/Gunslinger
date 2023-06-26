@@ -2544,6 +2544,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 48084260}
+    - target: {fileID: 2391898514752450715, guid: ae5f0b60a7a5d8248838942690371093, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 4f38e7640ea8e834a9111b1cc505270f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae5f0b60a7a5d8248838942690371093, type: 3}
 --- !u!224 &1127561116 stripped

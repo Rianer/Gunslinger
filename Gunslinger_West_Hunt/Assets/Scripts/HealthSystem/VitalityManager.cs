@@ -121,7 +121,7 @@ public class VitalityManager : MonoBehaviour
         {
             gm.IsPlayerAlive = false;
             Debug.Log("Player Killed");
-
+            gm.KillPlayer();
         }
     }
 
