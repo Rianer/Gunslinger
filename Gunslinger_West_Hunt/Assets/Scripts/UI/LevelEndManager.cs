@@ -11,21 +11,24 @@ public class LevelEndManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI levelName;
     [SerializeField] private TextMeshProUGUI status;
     [SerializeField] private TextMeshProUGUI money;
-
+    [SerializeField] private TextMeshProUGUI levelClearMessage;
+    public LevelEscape levelEscape;
 
 
     private void Start()
     {
+        ToggleLevelClear(false);
         endScreen.SetActive(false);
     }
 
     public void InitiateEndScreen(string levelName, string status, string money, string sceneName)
     {
+        ToggleLevelClear(false);
         this.sceneName = sceneName;
         this.levelName.text = levelName;
         this.status.text = status;
         this.money.text = money;
-        endScreen.SetActive (true);
+        endScreen.SetActive(true);
     }
 
     public void RestartLevel()
@@ -36,5 +39,19 @@ public class LevelEndManager : MonoBehaviour
     public void GoToMenu()
     {
         SceneManager.LoadScene("Start Menu", LoadSceneMode.Single);
+    }
+
+    public void ToggleLevelClear(bool show)
+    {
+        if (show)
+        {
+            levelClearMessage.enabled = true;
+            levelEscape.ShowEscape();
+        }
+        else
+        {
+            levelClearMessage.enabled = false;
+            levelEscape.HideEscape();
+        }
     }
 }

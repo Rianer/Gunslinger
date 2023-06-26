@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int playerHealth;
     public int playerArmor;
     public HealthBar playerHealthBar;
+    public ShieldBar shieldBar;
 
     private Vector2 playerPosition;
     private bool isPlayerAlive;
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
         if(remainingTargets == 0)
         {
             levelWon = true;
+            levelEndManager.ToggleLevelClear(true);
             Debug.Log("Level Cleared");
         }
     }

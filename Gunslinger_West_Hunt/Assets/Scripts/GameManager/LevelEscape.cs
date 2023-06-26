@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class LevelEscape : MonoBehaviour
 {
     private GameManager gm;
+    private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = false;
         gm = GameManager.Instance;
     }
 
@@ -28,5 +32,15 @@ public class LevelEscape : MonoBehaviour
 
         Debug.Log("Level Escaped");
         gm.OnLevelExit();
+    }
+
+    public void ShowEscape()
+    {
+        spriteRenderer.enabled = true;
+    }
+
+    public void HideEscape()
+    {
+        spriteRenderer.enabled = false;
     }
 }

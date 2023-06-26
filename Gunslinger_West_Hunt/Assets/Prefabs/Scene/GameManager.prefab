@@ -47,8 +47,11 @@ MonoBehaviour:
   playerHealth: 0
   playerArmor: 0
   playerHealthBar: {fileID: 0}
+  shieldBar: {fileID: 0}
   player: {fileID: 0}
   playerLoadout: {fileID: 11400000, guid: fb221aa361df3df4eb3bd0619c6fc245, type: 2}
   remainingTargets: 0
   levelMeta: {fileID: 11400000, guid: 3a6795ff97caa2f4f89a604792e7bb0d, type: 2}
   levelWon: 0
+  deadPlayerSprite: {fileID: 21300000, guid: b7bbf828f54c40f47922ad56194a4cab, type: 3}
+  levelEndManager: {fileID: 0}

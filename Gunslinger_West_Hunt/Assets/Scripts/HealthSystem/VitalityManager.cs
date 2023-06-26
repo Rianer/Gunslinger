@@ -96,6 +96,7 @@ public class VitalityManager : MonoBehaviour
         gm.playerHealth = health.CurrentHealth;
         gm.playerArmor = armor.CurrentArmor;
         gm.playerHealthBar.SetHealth(health.CurrentHealth);
+        gm.shieldBar.SetShield(armor.CurrentArmor);
     }
 
     private void OnArmorBreak()
