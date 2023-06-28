@@ -156,7 +156,7 @@ public class VitalityManager : MonoBehaviour
 
         armor.Repair(characterStats.armorHealAmmount);
         lastHealTime = DateTime.Now;
-        DebugStatus();
+        UpdateGameManager();
 
         return true;
     }

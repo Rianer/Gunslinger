@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
 
     public LevelEndManager levelEndManager;
 
+    public WeaponGaugeManager gaugeManager;
+
     private void Awake()
     {
         Debug.Log($"Entered the level {levelMeta.levelName}");
@@ -83,5 +85,17 @@ public class GameManager : MonoBehaviour
         levelMeta.isNextLevelUnlocked = true;
     }
 
+    public void UpdateWeaponUI(WeaponStatus status)
+    {
+        if (status.isReloading)
+        {
+            gaugeManager.UpdateAmmoIndicator("Reload");
+        }
+        else
+        {
+            string indicator = $"{status.currentAmmo}/{status.maxAmmo}";
+            gaugeManager.UpdateAmmoIndicator(indicator);
+        }
+    }
 
 }

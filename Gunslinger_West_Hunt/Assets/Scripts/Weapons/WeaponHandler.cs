@@ -44,6 +44,7 @@ public class WeaponHandler : MonoBehaviour, IObserver<InputObserverArgs>
         if (clickedButtons.fire && allowAttack && equipedWeapon != null)
         {
             equipedWeapon.Attack();
+            equipedWeapon.NotifyGameManager();
             allowAttack = false;
         }
     }

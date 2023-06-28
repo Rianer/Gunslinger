@@ -5,4 +5,6 @@ using UnityEngine;
 public abstract class Weapon : MonoBehaviour 
 {
     abstract public void Attack();
+    abstract public void NotifyGameManager();
+    
 }

@@ -30,6 +30,7 @@ public class RangedWeapon : Weapon
         timeDelayBetweenShots = (int)Math.Floor(60 / weaponStats.fireRate * 1000);
         reloadTime_MS = (int)Math.Floor(weaponStats.reloadTime_S * 1000);
         bulletsInMagazine = weaponStats.magazineSize;
+        NotifyGameManager();
     }
     public override void Attack()
     {
@@ -46,6 +47,7 @@ public class RangedWeapon : Weapon
             {
                 isWeaponReloading=false;
                 bulletsInMagazine = weaponStats.magazineSize;
+                NotifyGameManager();
             }
         }
     }
@@ -70,6 +72,7 @@ public class RangedWeapon : Weapon
             bullet.ApplyProperties(weaponStats);
             bullet.Fire(firePoint.up);
             bulletsInMagazine -= 1;
+            NotifyGameManager();
         }
     }
 
@@ -77,12 +80,12 @@ public class RangedWeapon : Weapon
     {
         if(bulletsInMagazine <= 0)
         {
-            if (!isWeaponReloading) //if the weapon was not already reloading the start reloading
+            if (!isWeaponReloading) //if the weapon was not already reloading then start reloading
             {
                 reloadStartTime = DateTime.Now;
                 isWeaponReloading = true;
+                NotifyGameManager();
             }
-                
         }
     }
 
@@ -96,5 +99,11 @@ public class RangedWeapon : Weapon
             return true;
         }
         return false;
+    }
+
+    public override void NotifyGameManager()
+    {
+        WeaponStatus status = new WeaponStatus(weaponStats.magazineSize, bulletsInMagazine, isWeaponReloading);
+        GameManager.Instance.UpdateWeaponUI(status);
     }
 }
