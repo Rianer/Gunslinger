@@ -19,7 +19,7 @@ public class Potion : Item
 
     public override void HandleClick()
     {
-        GameManager.Instance.Player.GetComponent<VitalityManager>().Health.Heal(healthPoints);
+        GameManager.Instance.Player.GetComponent<VitalityManager>().ApplyHeal(healthPoints);
     }
 
 }

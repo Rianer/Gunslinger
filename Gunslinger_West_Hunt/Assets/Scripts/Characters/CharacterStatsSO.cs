@@ -12,6 +12,8 @@ public class CharacterStatsSO : ScriptableObject
     public float elementalResistance;
     public float spiritualResistance;
 
+    public float itemDropChance = 0;
+
 
     public bool allowArmorHeal;
     /// <summary>

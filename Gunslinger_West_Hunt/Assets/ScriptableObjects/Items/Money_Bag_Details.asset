@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Money_Bag_Details
   m_EditorClassIdentifier: 
   useSameSprite: 0
-  inGameSprite: {fileID: 0}
-  inventorySprite: {fileID: 0}
-  weight: 0
-  value: 0
-  itemName: 
-  type: 0
+  inGameSprite: {fileID: 21300000, guid: dfa94aee554569641be8eaf8109b848f, type: 3}
+  inventorySprite: {fileID: 21300000, guid: d59700713ee0cde44bd72a24ace7de2d, type: 3}
+  weight: 3
+  value: 45
+  itemName: Gold Bag
+  type: 1
   armor: 0
   healthPoints: 0
   experiencePoints: 0
+  description: 'Bounty: $70'

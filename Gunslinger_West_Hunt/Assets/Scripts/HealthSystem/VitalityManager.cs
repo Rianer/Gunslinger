@@ -19,6 +19,7 @@ public class VitalityManager : MonoBehaviour
     private GameManager gm;
     private DateTime lastHitTime = new DateTime();
     private DateTime lastHealTime;
+    private float dropChance;
 
     [SerializeField] private List<GameObject> droppableItems = new List<GameObject>();
 
@@ -30,6 +31,7 @@ public class VitalityManager : MonoBehaviour
         armor = new Armor();
         health.SetStartingHealth(characterStats.healthPoints);
         armor.SetStartingArmor(characterStats.armorPoints);
+        dropChance = characterStats.itemDropChance;
 
         if (gameObject.CompareTag("Player"))
         {
@@ -167,9 +169,17 @@ public class VitalityManager : MonoBehaviour
         {
             return;
         }
+        if (HelperUtilities.OfChance(dropChance))
+        {
+            var random = new System.Random();
+            int index = random.Next(droppableItems.Count);
+            Instantiate(droppableItems[index], gameObject.transform.position, gameObject.transform.rotation);
+        }
+    }
 
-        var random = new System.Random();
-        int index = random.Next(droppableItems.Count);
-        Instantiate(droppableItems[index], gameObject.transform.position, gameObject.transform.rotation);
+    public void ApplyHeal(int ammount)
+    {
+        health.Heal(ammount);
+        UpdateGameManager();
     }
 }

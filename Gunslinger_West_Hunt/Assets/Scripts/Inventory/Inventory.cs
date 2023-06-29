@@ -155,16 +155,4 @@ public class Inventory : MonoBehaviour
         }
 
     }
-
-    private void Update()
-    {
-        //if (Input.GetKeyDown("e"))
-        //{
-        //    CollectAllItems();
-        //}
-        if (Input.GetKeyDown("p"))
-        {
-            DebugInventory();
-        }
-    }
 }

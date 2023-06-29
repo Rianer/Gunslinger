@@ -59,6 +59,32 @@ public class InventorySlot : MonoBehaviour
 
     public void DropItem()
     {
+        HideItemDetails();
         Inventory.GetInstance().RemoveItemFromInventory(itemDetails);
+    }
+
+    public void UseItem()
+    {
+        if(itemDetails.type == ItemType.consumable)
+        {
+            itemDetails.UseItem();
+            DropItem();
+        }
+    }
+
+    public void ShowItemDetails()
+    {
+        if(itemDetails != null)
+        {
+            InventoryPanelManager.Instance().ApplyItemDescription(itemDetails.description);
+        }
+    }
+
+    public void HideItemDetails()
+    {
+        if (itemDetails != null)
+        {
+            InventoryPanelManager.Instance().ApplyItemDescription("");
+        }
     }
 }

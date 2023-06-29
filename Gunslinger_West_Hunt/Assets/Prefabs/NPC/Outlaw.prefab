@@ -255,7 +255,6 @@ MonoBehaviour:
   isTarget: 0
   droppableItems:
   - {fileID: 5262776730799366897, guid: 0dab1a60862da5b4b9ddd305e1211b0e, type: 3}
-  - {fileID: 2290767526370302422, guid: 12a328313a51dd2428f72431edf6b72a, type: 3}
   - {fileID: 2290767526370302422, guid: cd00f012dd2446c4780baee99ec69cd8, type: 3}
 --- !u!114 &631435429
 MonoBehaviour:
@@ -269,10 +268,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861251454b974c34384111111f3ee8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 0}
+  weapon: {fileID: 1226295136888949459}
   threatLevel: 2
-  agresionProbability: 0.72
-  shootingDelayMS: 300
+  agresionProbability: 0.78
+  shootingDelayMS: 120
 --- !u!1 &940397803758379997
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +360,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 373061872fd0efc4e8b8db45abed3946, type: 3}
+--- !u!114 &1226295136888949459 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5232505642401830063, guid: 373061872fd0efc4e8b8db45abed3946, type: 3}
+  m_PrefabInstance: {fileID: 6456249568716168828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ceccfcdf57ed840a5ff39d8946fdd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7354091057709100312 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4582357769154736996, guid: 373061872fd0efc4e8b8db45abed3946, type: 3}

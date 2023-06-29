@@ -78,10 +78,6 @@ public class EnemyAI : MonoBehaviour
         targetLayer = LayerMask.NameToLayer("Player");
         InvokeRepeating("CheckTargetDetection", 0, 0.1f);
         targetVitalityManager = target.gameObject.GetComponent<VitalityManager>();
-        if(target == null)
-        {
-            target = GameManager.Instance.Player.GetComponent<Transform>();
-        }
 
         if(animator != null)
         {

@@ -14,3 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 10
   armorPoints: 5
+  kineticResistance: 0
+  elementalResistance: 0
+  spiritualResistance: 0
+  itemDropChance: 0.2
+  allowArmorHeal: 0
+  armorHealCooldown: 0
+  armorHealRate: 0
+  armorHealAmmount: 0

@@ -15,6 +15,7 @@ public class ItemDetailSO : ScriptableObject
     public int armor;
     public int healthPoints;
     public int experiencePoints;
+    public string description;
 
 
     private void OnValidate()
@@ -39,6 +40,14 @@ public class ItemDetailSO : ScriptableObject
         if (type != ItemType.bounty)
         {
             experiencePoints = 0;
+        }
+    }
+
+    public void UseItem()
+    {
+        if(type == ItemType.consumable) 
+        {
+            GameManager.Instance.Player.GetComponent<VitalityManager>().ApplyHeal(healthPoints);
         }
     }
 }
