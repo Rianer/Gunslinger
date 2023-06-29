@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Trophy : Item
 {
-    [SerializeField] private int experiencePoints;
+    private int experiencePoints;
 
     public int ExperiencePoints
     {

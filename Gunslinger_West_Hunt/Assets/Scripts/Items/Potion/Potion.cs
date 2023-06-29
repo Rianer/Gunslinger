@@ -16,4 +16,10 @@ public class Potion : Item
         base.ApplyDetails();
         healthPoints = details.healthPoints;
     }
+
+    public override void HandleClick()
+    {
+        GameManager.Instance.Player.GetComponent<VitalityManager>().Health.Heal(healthPoints);
+    }
+
 }

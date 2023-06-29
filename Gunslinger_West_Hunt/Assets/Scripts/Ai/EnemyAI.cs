@@ -61,6 +61,8 @@ public class EnemyAI : MonoBehaviour
     float distanceToPlayer = 0;
     float angleToPlayer = 0;
 
+    [SerializeField]private Animator animator;
+
     public bool IsTargetDetected { get => isTargetInLOS; }
 
     private void Start()
@@ -76,6 +78,15 @@ public class EnemyAI : MonoBehaviour
         targetLayer = LayerMask.NameToLayer("Player");
         InvokeRepeating("CheckTargetDetection", 0, 0.1f);
         targetVitalityManager = target.gameObject.GetComponent<VitalityManager>();
+        if(target == null)
+        {
+            target = GameManager.Instance.Player.GetComponent<Transform>();
+        }
+
+        if(animator != null)
+        {
+            animator.SetBool("isMoving", false);
+        }
 
         if (isPatroller)
         {
@@ -139,7 +150,18 @@ public class EnemyAI : MonoBehaviour
         //Idea implement different behaviors based on the enemy current state (following, returning to position, wandering)
         if (followingPathToTarget)
         {
+            if (animator != null)
+            {
+                animator.SetBool("isMoving", true);
+            }
             FollowPathToTarget();
+        }
+        else
+        {
+            if (animator != null)
+            {
+                animator.SetBool("isMoving", false);
+            }
         }
     }
 
@@ -211,7 +233,7 @@ public class EnemyAI : MonoBehaviour
         if (currentState == AILogicState.followingPlayer)
             lookDirection = (Vector2)target.position - rb.position;
         else if(currentState == AILogicState.followingPath)
-            lookDirection = (Vector2)targetCheckPoint.position - rb.position;
+            lookDirection = (Vector2)path.vectorPath[currentWaypoint] - rb.position;
         Vector2 velocity = movementVector * speed;
         rb.velocity = velocity;
         rb.rotation = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90;

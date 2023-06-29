@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     {
         GameObject weapon = Instantiate(GameManager.Instance.playerLoadout.gunPrefab, weaponAnchor.transform);
         weapon.transform.parent = weaponAnchor.transform;
+        weapon.transform.GetChild(0).GetComponent<RangedWeapon>().isPlayerWeapon = true;
 
     }
 }

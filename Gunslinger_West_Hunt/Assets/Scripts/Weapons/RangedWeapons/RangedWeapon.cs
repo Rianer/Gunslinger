@@ -103,6 +103,8 @@ public class RangedWeapon : Weapon
 
     public override void NotifyGameManager()
     {
+        if (!isPlayerWeapon)
+            return;
         WeaponStatus status = new WeaponStatus(weaponStats.magazineSize, bulletsInMagazine, isWeaponReloading);
         GameManager.Instance.UpdateWeaponUI(status);
     }

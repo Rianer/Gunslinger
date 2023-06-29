@@ -39,25 +39,21 @@ public abstract class Item : MonoBehaviour
         get { return value; }
     }
 
-    public Item()
-    {
-        id = Guid.NewGuid().ToString();
-    }
+    //public Item()
+    //{
+    //    id = Guid.NewGuid().ToString();
+    //}
 
-    public Item(ItemDetailSO details)
-    {
-        id = Guid.NewGuid().ToString();
-        this.details = details;
-        ApplyDetails();
-    }
-
-    private void Awake()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
+    //public Item(ItemDetailSO details)
+    //{
+    //    id = Guid.NewGuid().ToString();
+    //    this.details = details;
+    //    ApplyDetails();
+    //}
 
     protected void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         id = Guid.NewGuid().ToString();
         ApplyDetails();
     }
@@ -71,6 +67,11 @@ public abstract class Item : MonoBehaviour
         value = details.value;
         itemName = details.itemName;
         itemType = details.type;
+    }
+
+    public virtual void HandleClick()
+    {
+        Debug.Log("Click not implemented");
     }
 
 }

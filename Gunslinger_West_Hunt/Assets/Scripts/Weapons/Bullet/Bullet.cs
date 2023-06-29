@@ -11,7 +11,6 @@ using UnityEngine.UI;
 public class Bullet : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private BoxCollider2D bulletCollider;
     [SerializeField] private ParticleSystem bulletHitSurfaceParticles;
     private int damage;
     private DamageType damageType;
@@ -23,7 +22,6 @@ public class Bullet : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        bulletCollider = GetComponent<BoxCollider2D>();
         Physics2D.IgnoreLayerCollision(gameObject.layer, semiObstacleLayer);
         Physics2D.IgnoreLayerCollision(gameObject.layer, gameObject.layer);
 
@@ -63,8 +61,6 @@ public class Bullet : MonoBehaviour
 
     private void DealDamage(VitalityManager targetVitalityManager)
     {
-        //TODO: calculate complex damage model
         targetVitalityManager.ReceiveDamage(damage, damageType);
-
     }
 }
