@@ -17,7 +17,7 @@ MonoBehaviour:
   levelDescription: 'This is your first hunt, try not to die on your first day of
     work. '
   thumbnail: {fileID: 0}
-  levelPassed: 0
+  levelPassed: 1
   levelAvailable: 1
   nextLevelUnlock: 
   reward: 150

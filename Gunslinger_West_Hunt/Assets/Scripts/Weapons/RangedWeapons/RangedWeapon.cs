@@ -30,7 +30,7 @@ public class RangedWeapon : Weapon
         timeDelayBetweenShots = (int)Math.Floor(60 / weaponStats.fireRate * 1000);
         reloadTime_MS = (int)Math.Floor(weaponStats.reloadTime_S * 1000);
         bulletsInMagazine = weaponStats.magazineSize;
-        NotifyGameManager();
+        
     }
     public override void Attack()
     {

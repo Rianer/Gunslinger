@@ -14,6 +14,7 @@ public class WeaponHandler : MonoBehaviour, IObserver<InputObserverArgs>
     {
         GameObject weaponObject = weaponAnchorPoint.GetChild(0).gameObject;
         equipedWeapon = weaponObject.transform.GetChild(0).gameObject.GetComponent<Weapon>();
+        equipedWeapon.NotifyGameManager();
     }
 
     public void UpdateObserver(InputObserverArgs args)

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: WeaponUnlocks
   m_EditorClassIdentifier: 
   unlockedWeapons:
+  - 
   - Revolver
-  - Rifle

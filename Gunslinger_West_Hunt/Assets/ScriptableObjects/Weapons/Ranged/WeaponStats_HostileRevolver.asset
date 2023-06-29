@@ -17,9 +17,9 @@ MonoBehaviour:
   attackType: 0
   singleFire: 1
   fireRate: 300
-  bulletSpeed: 1
+  bulletSpeed: 1.8
   damageArea: 0
   bulletType: 0
-  reloadTime_S: 3
-  magazineSize: 4
+  reloadTime_S: 2
+  magazineSize: 5
   ignoreLayer: 8
