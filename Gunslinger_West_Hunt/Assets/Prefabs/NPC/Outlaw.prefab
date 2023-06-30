@@ -222,7 +222,7 @@ MonoBehaviour:
   targetMemoryMS: 2000
   patrolPath: {fileID: 0}
   isPatroller: 0
-  animator: {fileID: 0}
+  animator: {fileID: 792602910236342395}
 --- !u!58 &940397802606265183
 CircleCollider2D:
   m_ObjectHideFlags: 0
