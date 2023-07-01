@@ -12,6 +12,7 @@ public class LevelMetaSO : ScriptableObject
     [SerializeField]private List<string> passedLevels = new List<string>();
     public string nextLevel = "none";
     public bool isNextLevelUnlocked = false;
+    public string levelTheme = "none";
 
     public void RecordPassedLevel(string level)
     {

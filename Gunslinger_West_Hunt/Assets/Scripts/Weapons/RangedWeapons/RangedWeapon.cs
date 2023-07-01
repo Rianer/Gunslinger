@@ -10,6 +10,7 @@ public class RangedWeapon : Weapon
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private WeaponStatsSO weaponStats;
+    [SerializeField] private string shootingSoundName;
 
     /// <summary>
     /// Time in miliseconds that it takes for the weapon to prepare for shooting the next round
@@ -67,6 +68,10 @@ public class RangedWeapon : Weapon
     {
         if(CheckTimeElapsed(timeDelayBetweenShots))
         {
+            if(shootingSoundName != null)
+            {
+                GameManager.Instance.soundManager.PlaySound(shootingSoundName);
+            }
             GameObject instantiatedBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Bullet bullet = instantiatedBullet.GetComponent<Bullet>();
             bullet.ApplyProperties(weaponStats);

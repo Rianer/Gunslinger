@@ -95,7 +95,8 @@ public class VitalityManager : MonoBehaviour
 
     private void UpdateGameManager()
     {
-        gm.playerHealth = health.CurrentHealth;
+        if (!gameObject.CompareTag("Player"))
+            return;
         gm.playerArmor = armor.CurrentArmor;
         gm.playerHealthBar.SetHealth(health.CurrentHealth);
         gm.shieldBar.SetShield(armor.CurrentArmor);
@@ -110,6 +111,7 @@ public class VitalityManager : MonoBehaviour
     {
         if (!gameObject.CompareTag("Player"))
         {
+            gm.soundManager.PlaySound("enemy_killed");
             if (isTarget)
             {
                 gm.remainingTargets--;

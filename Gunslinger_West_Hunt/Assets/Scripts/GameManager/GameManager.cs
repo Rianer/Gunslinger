@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public LevelEndManager levelEndManager;
 
     public WeaponGaugeManager gaugeManager;
+    public SoundManager soundManager;
 
     private void Awake()
     {
@@ -35,6 +36,11 @@ public class GameManager : MonoBehaviour
         IsPlayerAlive = true;
         levelWon = false;
         remainingTargets = levelMeta.targets;
+    }
+
+    private void Start()
+    {
+        soundManager.PlaySound(levelMeta.levelTheme);
     }
 
     public void UpdatePlayerPosition(Vector2 newPosition)
@@ -68,6 +74,7 @@ public class GameManager : MonoBehaviour
 
     public void OnLevelExit()
     {
+        soundManager.StopSound(levelMeta.levelTheme);
         Inventory inventory = Inventory.GetInstance();
         int totalReward = levelMeta.levelReward;
         foreach(KeyValuePair<ItemDetailSO, int> entry in inventory.GetInventoryItems())

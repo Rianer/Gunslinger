@@ -31,12 +31,11 @@ public class LevelPicker : MonoBehaviour
         {
             GetComponent<Image>().color = new Color32(180, 180, 180, 255);
         }
-        
-        
     }
 
     public void LoadScene()
     {
+        MenuManager.Instance.soundManager.StopSound("main_menu_theme");
         ApplyLevelMeta();
         SceneManager.LoadScene(levelParameters.sceneName, LoadSceneMode.Single);
     }
@@ -49,6 +48,7 @@ public class LevelPicker : MonoBehaviour
         levelMeta.sceneName = levelParameters.sceneName;
         levelMeta.nextLevel = levelParameters.nextLevelUnlock;
         levelMeta.isNextLevelUnlocked = false;
+        levelMeta.levelTheme = levelParameters.levelTheme;
     }
 
     

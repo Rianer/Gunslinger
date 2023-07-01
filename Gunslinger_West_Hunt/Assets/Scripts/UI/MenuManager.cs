@@ -6,6 +6,8 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField]List<MenuGroup> menuGroups = new List<MenuGroup>();
     private GameObject activeMenu = null;
+    public SoundManager soundManager;
+    public static MenuManager Instance { get; private set; }
     private void Start()
     {
         //foreach (var group in menuGroups)
@@ -13,6 +15,11 @@ public class MenuManager : MonoBehaviour
         //    group.GetCurrentGroup().SetActive(false);
         //}
         EnterMenu("Main Group");
+        if(soundManager != null)
+        {
+            soundManager.PlaySound("main_menu_theme");
+        }
+        Instance = this;
     }
 
     public void EnterMenu(string menuName)

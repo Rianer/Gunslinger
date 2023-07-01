@@ -132,6 +132,7 @@ MonoBehaviour:
   firePoint: {fileID: 4340900226066690309}
   bulletPrefab: {fileID: 8840056876580091166, guid: 852986fe556b3134fa0f03aebe548d9f, type: 3}
   weaponStats: {fileID: 11400000, guid: 28ce7c59d1fd45749a440f19674ea510, type: 2}
+  shootingSoundName: enemy_revolver_shooting
 --- !u!1 &5152138835734268787
 GameObject:
   m_ObjectHideFlags: 0

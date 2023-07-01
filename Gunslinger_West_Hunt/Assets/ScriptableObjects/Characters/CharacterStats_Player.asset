@@ -17,7 +17,8 @@ MonoBehaviour:
   kineticResistance: 0
   elementalResistance: 0
   spiritualResistance: 0
+  itemDropChance: 0
   allowArmorHeal: 1
-  armorHealCooldown: 400
+  armorHealCooldown: 1500
   armorHealRate: 500
   armorHealAmmount: 1

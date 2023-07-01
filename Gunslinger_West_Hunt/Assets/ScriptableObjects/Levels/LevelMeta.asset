@@ -16,3 +16,8 @@ MonoBehaviour:
   levelReward: 200
   targets: 1
   sceneName: DevelopmentScene
+  passedLevels:
+  - Tutorial
+  nextLevel: none
+  isNextLevelUnlocked: 1
+  levelTheme: main_menu_theme
