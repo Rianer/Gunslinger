@@ -20,5 +20,6 @@ MonoBehaviour:
   levelPassed: 1
   levelAvailable: 1
   nextLevelUnlock: 
+  levelTheme: level_2_theme
   reward: 150
   targets: 1

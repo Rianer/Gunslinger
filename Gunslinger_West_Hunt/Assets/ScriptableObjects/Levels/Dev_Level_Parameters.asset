@@ -19,6 +19,6 @@ MonoBehaviour:
   levelPassed: 1
   levelAvailable: 1
   nextLevelUnlock: The First Hunt
-  levelTheme: main_menu_theme
+  levelTheme: level_1_theme
   reward: 100
   targets: 1

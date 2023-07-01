@@ -118,7 +118,7 @@ MonoBehaviour:
   - name: main_menu_theme
     clip: {fileID: 8300000, guid: 867b73c32ade34b478794696af5dc357, type: 3}
     isLoop: 1
-    volume: 0.677
+    volume: 0.826
     priority: 114
     soundSource: {fileID: 0}
   - name: enemy_revolver_shooting
@@ -126,4 +126,22 @@ MonoBehaviour:
     isLoop: 0
     volume: 0.581
     priority: 148
+    soundSource: {fileID: 0}
+  - name: level_1_theme
+    clip: {fileID: 8300000, guid: 867b73c32ade34b478794696af5dc357, type: 3}
+    isLoop: 1
+    volume: 0.838
+    priority: 114
+    soundSource: {fileID: 0}
+  - name: level_2_theme
+    clip: {fileID: 8300000, guid: 9190ea5be33715947908b483d22492e1, type: 3}
+    isLoop: 1
+    volume: 0.828
+    priority: 114
+    soundSource: {fileID: 0}
+  - name: level_3_theme
+    clip: {fileID: 8300000, guid: 82eee38c53a4d3943bcac58df0ebde42, type: 3}
+    isLoop: 1
+    volume: 0.828
+    priority: 114
     soundSource: {fileID: 0}
