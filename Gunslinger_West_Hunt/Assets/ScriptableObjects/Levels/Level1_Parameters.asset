@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Level1_Parameters
   m_EditorClassIdentifier: 
   sceneName: Level1
-  levelTitle: The First Hunt
+  levelTitle: The Death Valley
   levelDescription: 'This is your first hunt, try not to die on your first day of
     work. '
   thumbnail: {fileID: 0}
-  levelPassed: 1
-  levelAvailable: 1
-  nextLevelUnlock: 
+  levelPassed: 0
+  levelAvailable: 0
+  nextLevelUnlock: Black-Ridge Hunt
   levelTheme: level_2_theme
   reward: 150
   targets: 1

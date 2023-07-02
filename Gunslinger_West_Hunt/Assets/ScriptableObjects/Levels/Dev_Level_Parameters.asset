@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: Dev_Level_Parameters
   m_EditorClassIdentifier: 
   sceneName: DevelopmentScene
-  levelTitle: Tutorial
-  levelDescription: "\tThis is your first challenge!"
+  levelTitle: Lockdown
+  levelDescription: 'Escaping the dungeon is your priority.
+
+    Kill all the enemies
+    and secure your freedom... and a good reward.'
   thumbnail: {fileID: 0}
-  levelPassed: 1
+  levelPassed: 0
   levelAvailable: 1
-  nextLevelUnlock: The First Hunt
+  nextLevelUnlock: The Death Valley
   levelTheme: level_1_theme
   reward: 100
   targets: 1

@@ -18,6 +18,6 @@ MonoBehaviour:
   sceneName: DevelopmentScene
   passedLevels:
   - Tutorial
-  nextLevel: none
-  isNextLevelUnlocked: 1
+  nextLevel: 
+  isNextLevelUnlocked: 0
   levelTheme: main_menu_theme
