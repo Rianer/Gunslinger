@@ -145,3 +145,15 @@ MonoBehaviour:
     volume: 0.828
     priority: 114
     soundSource: {fileID: 0}
+  - name: rifle_shooting
+    clip: {fileID: 8300000, guid: f9058cadb4df3434ab7c5da50c5523ce, type: 3}
+    isLoop: 0
+    volume: 0.796
+    priority: 150
+    soundSource: {fileID: 0}
+  - name: enemy_rifle_shooting
+    clip: {fileID: 8300000, guid: c4225d0e180608649bc8d35ed8ebbe17, type: 3}
+    isLoop: 0
+    volume: 0.796
+    priority: 148
+    soundSource: {fileID: 0}

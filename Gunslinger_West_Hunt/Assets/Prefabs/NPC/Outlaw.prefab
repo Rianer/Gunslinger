@@ -256,6 +256,7 @@ MonoBehaviour:
   droppableItems:
   - {fileID: 5262776730799366897, guid: 0dab1a60862da5b4b9ddd305e1211b0e, type: 3}
   - {fileID: 2290767526370302422, guid: cd00f012dd2446c4780baee99ec69cd8, type: 3}
+  - {fileID: 5262776730799366897, guid: 0dab1a60862da5b4b9ddd305e1211b0e, type: 3}
 --- !u!114 &631435429
 MonoBehaviour:
   m_ObjectHideFlags: 0

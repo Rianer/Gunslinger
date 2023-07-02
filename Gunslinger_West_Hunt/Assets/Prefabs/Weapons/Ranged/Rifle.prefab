@@ -183,9 +183,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ceccfcdf57ed840a5ff39d8946fdd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerWeapon: 0
   firePoint: {fileID: 1629876341683043823}
   bulletPrefab: {fileID: 1192924534758756222, guid: a0e383b9d355c9042b46a97d5a6bad0c, type: 3}
   weaponStats: {fileID: 11400000, guid: e5d62a75c63ffc348bf3111cb02a603f, type: 2}
+  shootingSoundName: rifle_shooting
 --- !u!1 &8826209656128218925
 GameObject:
   m_ObjectHideFlags: 0
