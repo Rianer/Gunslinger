@@ -109,7 +109,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 272
+        y: 496
         width: 16
         height: 16
       alignment: 0
@@ -130,7 +130,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 272
+        y: 496
         width: 16
         height: 16
       alignment: 0
@@ -151,7 +151,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 272
+        y: 496
         width: 16
         height: 16
       alignment: 0
@@ -172,7 +172,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 272
+        y: 496
         width: 16
         height: 16
       alignment: 0
@@ -193,7 +193,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 272
+        y: 496
         width: 16
         height: 16
       alignment: 0
@@ -213,8 +213,8 @@ TextureImporter:
       name: WildWest_5
       rect:
         serializedVersion: 2
-        x: 144
-        y: 272
+        x: 208
+        y: 496
         width: 16
         height: 16
       alignment: 0
@@ -234,8 +234,8 @@ TextureImporter:
       name: WildWest_6
       rect:
         serializedVersion: 2
-        x: 160
-        y: 272
+        x: 224
+        y: 496
         width: 16
         height: 16
       alignment: 0
@@ -255,8 +255,8 @@ TextureImporter:
       name: WildWest_7
       rect:
         serializedVersion: 2
-        x: 176
-        y: 272
+        x: 240
+        y: 496
         width: 16
         height: 16
       alignment: 0
@@ -276,8 +276,8 @@ TextureImporter:
       name: WildWest_8
       rect:
         serializedVersion: 2
-        x: 192
-        y: 272
+        x: 288
+        y: 496
         width: 16
         height: 16
       alignment: 0
@@ -297,8 +297,8 @@ TextureImporter:
       name: WildWest_9
       rect:
         serializedVersion: 2
-        x: 208
-        y: 272
+        x: 304
+        y: 496
         width: 16
         height: 16
       alignment: 0
@@ -318,8 +318,8 @@ TextureImporter:
       name: WildWest_10
       rect:
         serializedVersion: 2
-        x: 224
-        y: 272
+        x: 320
+        y: 496
         width: 16
         height: 16
       alignment: 0
@@ -339,8 +339,8 @@ TextureImporter:
       name: WildWest_11
       rect:
         serializedVersion: 2
-        x: 240
-        y: 272
+        x: 128
+        y: 480
         width: 16
         height: 16
       alignment: 0
@@ -360,8 +360,8 @@ TextureImporter:
       name: WildWest_12
       rect:
         serializedVersion: 2
-        x: 256
-        y: 272
+        x: 160
+        y: 480
         width: 16
         height: 16
       alignment: 0
@@ -381,8 +381,8 @@ TextureImporter:
       name: WildWest_13
       rect:
         serializedVersion: 2
-        x: 272
-        y: 272
+        x: 176
+        y: 480
         width: 16
         height: 16
       alignment: 0
@@ -402,8 +402,8 @@ TextureImporter:
       name: WildWest_14
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
+        x: 208
+        y: 480
         width: 16
         height: 16
       alignment: 0
@@ -423,8 +423,8 @@ TextureImporter:
       name: WildWest_15
       rect:
         serializedVersion: 2
-        x: 128
-        y: 256
+        x: 224
+        y: 480
         width: 16
         height: 16
       alignment: 0
@@ -444,8 +444,8 @@ TextureImporter:
       name: WildWest_16
       rect:
         serializedVersion: 2
-        x: 144
-        y: 256
+        x: 240
+        y: 480
         width: 16
         height: 16
       alignment: 0
@@ -465,8 +465,8 @@ TextureImporter:
       name: WildWest_17
       rect:
         serializedVersion: 2
-        x: 160
-        y: 256
+        x: 288
+        y: 480
         width: 16
         height: 16
       alignment: 0
@@ -486,8 +486,8 @@ TextureImporter:
       name: WildWest_18
       rect:
         serializedVersion: 2
-        x: 176
-        y: 256
+        x: 304
+        y: 480
         width: 16
         height: 16
       alignment: 0
@@ -507,8 +507,8 @@ TextureImporter:
       name: WildWest_19
       rect:
         serializedVersion: 2
-        x: 192
-        y: 256
+        x: 320
+        y: 480
         width: 16
         height: 16
       alignment: 0
@@ -528,8 +528,8 @@ TextureImporter:
       name: WildWest_20
       rect:
         serializedVersion: 2
-        x: 208
-        y: 256
+        x: 0
+        y: 464
         width: 16
         height: 16
       alignment: 0
@@ -549,8 +549,8 @@ TextureImporter:
       name: WildWest_21
       rect:
         serializedVersion: 2
-        x: 224
-        y: 256
+        x: 32
+        y: 464
         width: 16
         height: 16
       alignment: 0
@@ -570,8 +570,8 @@ TextureImporter:
       name: WildWest_22
       rect:
         serializedVersion: 2
-        x: 240
-        y: 256
+        x: 48
+        y: 464
         width: 16
         height: 16
       alignment: 0
@@ -591,8 +591,8 @@ TextureImporter:
       name: WildWest_23
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
+        x: 96
+        y: 464
         width: 16
         height: 16
       alignment: 0
@@ -612,8 +612,8 @@ TextureImporter:
       name: WildWest_24
       rect:
         serializedVersion: 2
-        x: 272
-        y: 256
+        x: 208
+        y: 464
         width: 16
         height: 16
       alignment: 0
@@ -633,8 +633,8 @@ TextureImporter:
       name: WildWest_25
       rect:
         serializedVersion: 2
-        x: 0
-        y: 240
+        x: 224
+        y: 464
         width: 16
         height: 16
       alignment: 0
@@ -654,8 +654,8 @@ TextureImporter:
       name: WildWest_26
       rect:
         serializedVersion: 2
-        x: 32
-        y: 240
+        x: 240
+        y: 464
         width: 16
         height: 16
       alignment: 0
@@ -675,8 +675,8 @@ TextureImporter:
       name: WildWest_27
       rect:
         serializedVersion: 2
-        x: 48
-        y: 240
+        x: 288
+        y: 464
         width: 16
         height: 16
       alignment: 0
@@ -696,8 +696,8 @@ TextureImporter:
       name: WildWest_28
       rect:
         serializedVersion: 2
-        x: 64
-        y: 240
+        x: 304
+        y: 464
         width: 16
         height: 16
       alignment: 0
@@ -717,8 +717,8 @@ TextureImporter:
       name: WildWest_29
       rect:
         serializedVersion: 2
-        x: 96
-        y: 240
+        x: 320
+        y: 464
         width: 16
         height: 16
       alignment: 0
@@ -738,8 +738,8 @@ TextureImporter:
       name: WildWest_30
       rect:
         serializedVersion: 2
-        x: 128
-        y: 240
+        x: 0
+        y: 448
         width: 16
         height: 16
       alignment: 0
@@ -759,8 +759,8 @@ TextureImporter:
       name: WildWest_31
       rect:
         serializedVersion: 2
-        x: 144
-        y: 240
+        x: 32
+        y: 448
         width: 16
         height: 16
       alignment: 0
@@ -780,8 +780,8 @@ TextureImporter:
       name: WildWest_32
       rect:
         serializedVersion: 2
-        x: 160
-        y: 240
+        x: 48
+        y: 448
         width: 16
         height: 16
       alignment: 0
@@ -801,8 +801,8 @@ TextureImporter:
       name: WildWest_33
       rect:
         serializedVersion: 2
-        x: 176
-        y: 240
+        x: 96
+        y: 448
         width: 16
         height: 16
       alignment: 0
@@ -822,8 +822,8 @@ TextureImporter:
       name: WildWest_34
       rect:
         serializedVersion: 2
-        x: 192
-        y: 240
+        x: 208
+        y: 448
         width: 16
         height: 16
       alignment: 0
@@ -843,8 +843,8 @@ TextureImporter:
       name: WildWest_35
       rect:
         serializedVersion: 2
-        x: 208
-        y: 240
+        x: 240
+        y: 448
         width: 16
         height: 16
       alignment: 0
@@ -864,8 +864,8 @@ TextureImporter:
       name: WildWest_36
       rect:
         serializedVersion: 2
-        x: 224
-        y: 240
+        x: 288
+        y: 448
         width: 16
         height: 16
       alignment: 0
@@ -885,8 +885,8 @@ TextureImporter:
       name: WildWest_37
       rect:
         serializedVersion: 2
-        x: 240
-        y: 240
+        x: 320
+        y: 448
         width: 16
         height: 16
       alignment: 0
@@ -906,8 +906,8 @@ TextureImporter:
       name: WildWest_38
       rect:
         serializedVersion: 2
-        x: 256
-        y: 240
+        x: 96
+        y: 432
         width: 16
         height: 16
       alignment: 0
@@ -927,8 +927,8 @@ TextureImporter:
       name: WildWest_39
       rect:
         serializedVersion: 2
-        x: 272
-        y: 240
+        x: 0
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -948,8 +948,8 @@ TextureImporter:
       name: WildWest_40
       rect:
         serializedVersion: 2
-        x: 0
-        y: 224
+        x: 48
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -969,8 +969,8 @@ TextureImporter:
       name: WildWest_41
       rect:
         serializedVersion: 2
-        x: 32
-        y: 224
+        x: 64
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -990,8 +990,8 @@ TextureImporter:
       name: WildWest_42
       rect:
         serializedVersion: 2
-        x: 48
-        y: 224
+        x: 80
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -1011,8 +1011,8 @@ TextureImporter:
       name: WildWest_43
       rect:
         serializedVersion: 2
-        x: 64
-        y: 224
+        x: 96
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -1032,8 +1032,8 @@ TextureImporter:
       name: WildWest_44
       rect:
         serializedVersion: 2
-        x: 96
-        y: 224
+        x: 112
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -1053,8 +1053,8 @@ TextureImporter:
       name: WildWest_45
       rect:
         serializedVersion: 2
-        x: 128
-        y: 224
+        x: 192
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -1074,8 +1074,8 @@ TextureImporter:
       name: WildWest_46
       rect:
         serializedVersion: 2
-        x: 144
-        y: 224
+        x: 208
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -1095,8 +1095,8 @@ TextureImporter:
       name: WildWest_47
       rect:
         serializedVersion: 2
-        x: 160
-        y: 224
+        x: 224
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -1116,8 +1116,8 @@ TextureImporter:
       name: WildWest_48
       rect:
         serializedVersion: 2
-        x: 176
-        y: 224
+        x: 240
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -1137,8 +1137,8 @@ TextureImporter:
       name: WildWest_49
       rect:
         serializedVersion: 2
-        x: 192
-        y: 224
+        x: 256
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -1158,8 +1158,8 @@ TextureImporter:
       name: WildWest_50
       rect:
         serializedVersion: 2
-        x: 208
-        y: 224
+        x: 272
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -1179,8 +1179,8 @@ TextureImporter:
       name: WildWest_51
       rect:
         serializedVersion: 2
-        x: 240
-        y: 224
+        x: 304
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -1200,8 +1200,8 @@ TextureImporter:
       name: WildWest_52
       rect:
         serializedVersion: 2
-        x: 256
-        y: 224
+        x: 320
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -1221,8 +1221,8 @@ TextureImporter:
       name: WildWest_53
       rect:
         serializedVersion: 2
-        x: 272
-        y: 224
+        x: 336
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -1242,8 +1242,8 @@ TextureImporter:
       name: WildWest_54
       rect:
         serializedVersion: 2
-        x: 0
-        y: 208
+        x: 352
+        y: 416
         width: 16
         height: 16
       alignment: 0
@@ -1263,8 +1263,8 @@ TextureImporter:
       name: WildWest_55
       rect:
         serializedVersion: 2
-        x: 96
-        y: 208
+        x: 0
+        y: 400
         width: 16
         height: 16
       alignment: 0
@@ -1284,8 +1284,8 @@ TextureImporter:
       name: WildWest_56
       rect:
         serializedVersion: 2
-        x: 128
-        y: 208
+        x: 96
+        y: 400
         width: 16
         height: 16
       alignment: 0
@@ -1305,8 +1305,8 @@ TextureImporter:
       name: WildWest_57
       rect:
         serializedVersion: 2
-        x: 144
-        y: 208
+        x: 192
+        y: 400
         width: 16
         height: 16
       alignment: 0
@@ -1326,8 +1326,8 @@ TextureImporter:
       name: WildWest_58
       rect:
         serializedVersion: 2
-        x: 160
-        y: 208
+        x: 208
+        y: 400
         width: 16
         height: 16
       alignment: 0
@@ -1347,8 +1347,8 @@ TextureImporter:
       name: WildWest_59
       rect:
         serializedVersion: 2
-        x: 176
-        y: 208
+        x: 224
+        y: 400
         width: 16
         height: 16
       alignment: 0
@@ -1368,8 +1368,8 @@ TextureImporter:
       name: WildWest_60
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
+        x: 240
+        y: 400
         width: 16
         height: 16
       alignment: 0
@@ -1389,8 +1389,8 @@ TextureImporter:
       name: WildWest_61
       rect:
         serializedVersion: 2
-        x: 48
-        y: 192
+        x: 256
+        y: 400
         width: 16
         height: 16
       alignment: 0
@@ -1410,8 +1410,8 @@ TextureImporter:
       name: WildWest_62
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
+        x: 272
+        y: 400
         width: 16
         height: 16
       alignment: 0
@@ -1431,8 +1431,8 @@ TextureImporter:
       name: WildWest_63
       rect:
         serializedVersion: 2
-        x: 96
-        y: 192
+        x: 304
+        y: 400
         width: 16
         height: 16
       alignment: 0
@@ -1452,8 +1452,8 @@ TextureImporter:
       name: WildWest_64
       rect:
         serializedVersion: 2
-        x: 112
-        y: 192
+        x: 320
+        y: 400
         width: 16
         height: 16
       alignment: 0
@@ -1473,8 +1473,8 @@ TextureImporter:
       name: WildWest_65
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
+        x: 336
+        y: 400
         width: 16
         height: 16
       alignment: 0
@@ -1494,8 +1494,8 @@ TextureImporter:
       name: WildWest_66
       rect:
         serializedVersion: 2
-        x: 208
-        y: 192
+        x: 192
+        y: 384
         width: 16
         height: 16
       alignment: 0
@@ -1515,8 +1515,8 @@ TextureImporter:
       name: WildWest_67
       rect:
         serializedVersion: 2
-        x: 224
-        y: 192
+        x: 208
+        y: 384
         width: 16
         height: 16
       alignment: 0
@@ -1536,8 +1536,8 @@ TextureImporter:
       name: WildWest_68
       rect:
         serializedVersion: 2
-        x: 240
-        y: 192
+        x: 224
+        y: 384
         width: 16
         height: 16
       alignment: 0
@@ -1557,8 +1557,8 @@ TextureImporter:
       name: WildWest_69
       rect:
         serializedVersion: 2
-        x: 256
-        y: 192
+        x: 240
+        y: 384
         width: 16
         height: 16
       alignment: 0
@@ -1578,8 +1578,8 @@ TextureImporter:
       name: WildWest_70
       rect:
         serializedVersion: 2
-        x: 272
-        y: 192
+        x: 256
+        y: 384
         width: 16
         height: 16
       alignment: 0
@@ -1599,8 +1599,8 @@ TextureImporter:
       name: WildWest_71
       rect:
         serializedVersion: 2
-        x: 0
-        y: 176
+        x: 272
+        y: 384
         width: 16
         height: 16
       alignment: 0
@@ -1620,8 +1620,8 @@ TextureImporter:
       name: WildWest_72
       rect:
         serializedVersion: 2
-        x: 192
-        y: 176
+        x: 304
+        y: 384
         width: 16
         height: 16
       alignment: 0
@@ -1641,8 +1641,8 @@ TextureImporter:
       name: WildWest_73
       rect:
         serializedVersion: 2
-        x: 208
-        y: 176
+        x: 320
+        y: 384
         width: 16
         height: 16
       alignment: 0
@@ -1662,8 +1662,8 @@ TextureImporter:
       name: WildWest_74
       rect:
         serializedVersion: 2
-        x: 224
-        y: 176
+        x: 336
+        y: 384
         width: 16
         height: 16
       alignment: 0
@@ -1683,8 +1683,8 @@ TextureImporter:
       name: WildWest_75
       rect:
         serializedVersion: 2
-        x: 240
-        y: 176
+        x: 352
+        y: 384
         width: 16
         height: 16
       alignment: 0
@@ -1704,8 +1704,8 @@ TextureImporter:
       name: WildWest_76
       rect:
         serializedVersion: 2
-        x: 256
-        y: 176
+        x: 192
+        y: 368
         width: 16
         height: 16
       alignment: 0
@@ -1725,8 +1725,8 @@ TextureImporter:
       name: WildWest_77
       rect:
         serializedVersion: 2
-        x: 272
-        y: 176
+        x: 208
+        y: 368
         width: 16
         height: 16
       alignment: 0
@@ -1746,8 +1746,8 @@ TextureImporter:
       name: WildWest_78
       rect:
         serializedVersion: 2
-        x: 192
-        y: 160
+        x: 224
+        y: 368
         width: 16
         height: 16
       alignment: 0
@@ -1767,8 +1767,8 @@ TextureImporter:
       name: WildWest_79
       rect:
         serializedVersion: 2
-        x: 208
-        y: 160
+        x: 240
+        y: 368
         width: 16
         height: 16
       alignment: 0
@@ -1788,8 +1788,8 @@ TextureImporter:
       name: WildWest_80
       rect:
         serializedVersion: 2
-        x: 224
-        y: 160
+        x: 256
+        y: 368
         width: 16
         height: 16
       alignment: 0
@@ -1809,8 +1809,8 @@ TextureImporter:
       name: WildWest_81
       rect:
         serializedVersion: 2
-        x: 240
-        y: 160
+        x: 272
+        y: 368
         width: 16
         height: 16
       alignment: 0
@@ -1830,8 +1830,8 @@ TextureImporter:
       name: WildWest_82
       rect:
         serializedVersion: 2
-        x: 256
-        y: 160
+        x: 16
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -1851,8 +1851,8 @@ TextureImporter:
       name: WildWest_83
       rect:
         serializedVersion: 2
-        x: 272
-        y: 160
+        x: 32
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -1872,8 +1872,8 @@ TextureImporter:
       name: WildWest_84
       rect:
         serializedVersion: 2
-        x: 192
-        y: 144
+        x: 48
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -1893,8 +1893,8 @@ TextureImporter:
       name: WildWest_85
       rect:
         serializedVersion: 2
-        x: 208
-        y: 144
+        x: 64
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -1914,8 +1914,8 @@ TextureImporter:
       name: WildWest_86
       rect:
         serializedVersion: 2
-        x: 224
-        y: 144
+        x: 80
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -1935,8 +1935,8 @@ TextureImporter:
       name: WildWest_87
       rect:
         serializedVersion: 2
-        x: 240
-        y: 144
+        x: 96
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -1956,8 +1956,8 @@ TextureImporter:
       name: WildWest_88
       rect:
         serializedVersion: 2
-        x: 256
-        y: 144
+        x: 112
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -1977,8 +1977,8 @@ TextureImporter:
       name: WildWest_89
       rect:
         serializedVersion: 2
-        x: 272
-        y: 144
+        x: 128
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -1998,8 +1998,8 @@ TextureImporter:
       name: WildWest_90
       rect:
         serializedVersion: 2
-        x: 16
-        y: 128
+        x: 144
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -2019,8 +2019,8 @@ TextureImporter:
       name: WildWest_91
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
+        x: 192
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -2040,8 +2040,8 @@ TextureImporter:
       name: WildWest_92
       rect:
         serializedVersion: 2
-        x: 48
-        y: 128
+        x: 208
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -2061,8 +2061,8 @@ TextureImporter:
       name: WildWest_93
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
+        x: 224
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -2082,8 +2082,8 @@ TextureImporter:
       name: WildWest_94
       rect:
         serializedVersion: 2
-        x: 80
-        y: 128
+        x: 240
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -2103,8 +2103,8 @@ TextureImporter:
       name: WildWest_95
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
+        x: 256
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -2124,8 +2124,8 @@ TextureImporter:
       name: WildWest_96
       rect:
         serializedVersion: 2
-        x: 112
-        y: 128
+        x: 272
+        y: 352
         width: 16
         height: 16
       alignment: 0
@@ -2145,8 +2145,8 @@ TextureImporter:
       name: WildWest_97
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
+        x: 16
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2166,8 +2166,8 @@ TextureImporter:
       name: WildWest_98
       rect:
         serializedVersion: 2
-        x: 144
-        y: 128
+        x: 32
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2187,8 +2187,8 @@ TextureImporter:
       name: WildWest_99
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
+        x: 48
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2208,8 +2208,8 @@ TextureImporter:
       name: WildWest_100
       rect:
         serializedVersion: 2
-        x: 208
-        y: 128
+        x: 64
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2229,8 +2229,8 @@ TextureImporter:
       name: WildWest_101
       rect:
         serializedVersion: 2
-        x: 224
-        y: 128
+        x: 80
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2250,8 +2250,8 @@ TextureImporter:
       name: WildWest_102
       rect:
         serializedVersion: 2
-        x: 240
-        y: 128
+        x: 96
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2271,8 +2271,8 @@ TextureImporter:
       name: WildWest_103
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
+        x: 112
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2292,8 +2292,8 @@ TextureImporter:
       name: WildWest_104
       rect:
         serializedVersion: 2
-        x: 272
-        y: 128
+        x: 128
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2313,8 +2313,8 @@ TextureImporter:
       name: WildWest_105
       rect:
         serializedVersion: 2
-        x: 16
-        y: 112
+        x: 144
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2334,8 +2334,8 @@ TextureImporter:
       name: WildWest_106
       rect:
         serializedVersion: 2
-        x: 32
-        y: 112
+        x: 192
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2355,8 +2355,8 @@ TextureImporter:
       name: WildWest_107
       rect:
         serializedVersion: 2
-        x: 48
-        y: 112
+        x: 208
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2376,8 +2376,8 @@ TextureImporter:
       name: WildWest_108
       rect:
         serializedVersion: 2
-        x: 64
-        y: 112
+        x: 224
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2397,8 +2397,8 @@ TextureImporter:
       name: WildWest_109
       rect:
         serializedVersion: 2
-        x: 80
-        y: 112
+        x: 240
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2418,8 +2418,8 @@ TextureImporter:
       name: WildWest_110
       rect:
         serializedVersion: 2
-        x: 96
-        y: 112
+        x: 256
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2439,8 +2439,8 @@ TextureImporter:
       name: WildWest_111
       rect:
         serializedVersion: 2
-        x: 112
-        y: 112
+        x: 272
+        y: 336
         width: 16
         height: 16
       alignment: 0
@@ -2460,8 +2460,8 @@ TextureImporter:
       name: WildWest_112
       rect:
         serializedVersion: 2
-        x: 128
-        y: 112
+        x: 16
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2481,8 +2481,8 @@ TextureImporter:
       name: WildWest_113
       rect:
         serializedVersion: 2
-        x: 144
-        y: 112
+        x: 32
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2502,8 +2502,8 @@ TextureImporter:
       name: WildWest_114
       rect:
         serializedVersion: 2
-        x: 192
-        y: 112
+        x: 48
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2523,8 +2523,8 @@ TextureImporter:
       name: WildWest_115
       rect:
         serializedVersion: 2
-        x: 208
-        y: 112
+        x: 64
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2544,8 +2544,8 @@ TextureImporter:
       name: WildWest_116
       rect:
         serializedVersion: 2
-        x: 224
-        y: 112
+        x: 80
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2565,8 +2565,8 @@ TextureImporter:
       name: WildWest_117
       rect:
         serializedVersion: 2
-        x: 240
-        y: 112
+        x: 96
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2586,8 +2586,8 @@ TextureImporter:
       name: WildWest_118
       rect:
         serializedVersion: 2
-        x: 256
-        y: 112
+        x: 112
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2607,8 +2607,8 @@ TextureImporter:
       name: WildWest_119
       rect:
         serializedVersion: 2
-        x: 272
-        y: 112
+        x: 128
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2628,8 +2628,8 @@ TextureImporter:
       name: WildWest_120
       rect:
         serializedVersion: 2
-        x: 16
-        y: 96
+        x: 144
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2649,8 +2649,8 @@ TextureImporter:
       name: WildWest_121
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
+        x: 192
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2670,8 +2670,8 @@ TextureImporter:
       name: WildWest_122
       rect:
         serializedVersion: 2
-        x: 48
-        y: 96
+        x: 208
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2691,8 +2691,8 @@ TextureImporter:
       name: WildWest_123
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
+        x: 224
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2712,8 +2712,8 @@ TextureImporter:
       name: WildWest_124
       rect:
         serializedVersion: 2
-        x: 80
-        y: 96
+        x: 240
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2733,8 +2733,8 @@ TextureImporter:
       name: WildWest_125
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
+        x: 256
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2754,8 +2754,8 @@ TextureImporter:
       name: WildWest_126
       rect:
         serializedVersion: 2
-        x: 112
-        y: 96
+        x: 272
+        y: 320
         width: 16
         height: 16
       alignment: 0
@@ -2775,8 +2775,8 @@ TextureImporter:
       name: WildWest_127
       rect:
         serializedVersion: 2
-        x: 128
-        y: 96
+        x: 16
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -2796,8 +2796,8 @@ TextureImporter:
       name: WildWest_128
       rect:
         serializedVersion: 2
-        x: 144
-        y: 96
+        x: 32
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -2817,8 +2817,8 @@ TextureImporter:
       name: WildWest_129
       rect:
         serializedVersion: 2
-        x: 192
-        y: 96
+        x: 48
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -2838,8 +2838,8 @@ TextureImporter:
       name: WildWest_130
       rect:
         serializedVersion: 2
-        x: 208
-        y: 96
+        x: 64
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -2859,8 +2859,8 @@ TextureImporter:
       name: WildWest_131
       rect:
         serializedVersion: 2
-        x: 224
-        y: 96
+        x: 80
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -2880,8 +2880,8 @@ TextureImporter:
       name: WildWest_132
       rect:
         serializedVersion: 2
-        x: 240
-        y: 96
+        x: 96
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -2901,8 +2901,8 @@ TextureImporter:
       name: WildWest_133
       rect:
         serializedVersion: 2
-        x: 256
-        y: 96
+        x: 112
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -2922,8 +2922,8 @@ TextureImporter:
       name: WildWest_134
       rect:
         serializedVersion: 2
-        x: 272
-        y: 96
+        x: 128
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -2943,8 +2943,8 @@ TextureImporter:
       name: WildWest_135
       rect:
         serializedVersion: 2
-        x: 16
-        y: 80
+        x: 144
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -2964,8 +2964,8 @@ TextureImporter:
       name: WildWest_136
       rect:
         serializedVersion: 2
-        x: 32
-        y: 80
+        x: 192
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -2985,8 +2985,8 @@ TextureImporter:
       name: WildWest_137
       rect:
         serializedVersion: 2
-        x: 48
-        y: 80
+        x: 208
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -3006,8 +3006,8 @@ TextureImporter:
       name: WildWest_138
       rect:
         serializedVersion: 2
-        x: 64
-        y: 80
+        x: 224
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -3027,8 +3027,8 @@ TextureImporter:
       name: WildWest_139
       rect:
         serializedVersion: 2
-        x: 80
-        y: 80
+        x: 240
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -3048,8 +3048,8 @@ TextureImporter:
       name: WildWest_140
       rect:
         serializedVersion: 2
-        x: 96
-        y: 80
+        x: 256
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -3069,8 +3069,8 @@ TextureImporter:
       name: WildWest_141
       rect:
         serializedVersion: 2
-        x: 112
-        y: 80
+        x: 272
+        y: 304
         width: 16
         height: 16
       alignment: 0
@@ -3090,8 +3090,8 @@ TextureImporter:
       name: WildWest_142
       rect:
         serializedVersion: 2
-        x: 128
-        y: 80
+        x: 16
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3111,8 +3111,8 @@ TextureImporter:
       name: WildWest_143
       rect:
         serializedVersion: 2
-        x: 144
-        y: 80
+        x: 32
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3132,8 +3132,8 @@ TextureImporter:
       name: WildWest_144
       rect:
         serializedVersion: 2
-        x: 192
-        y: 80
+        x: 48
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3153,8 +3153,8 @@ TextureImporter:
       name: WildWest_145
       rect:
         serializedVersion: 2
-        x: 208
-        y: 80
+        x: 64
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3174,8 +3174,8 @@ TextureImporter:
       name: WildWest_146
       rect:
         serializedVersion: 2
-        x: 224
-        y: 80
+        x: 80
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3195,8 +3195,8 @@ TextureImporter:
       name: WildWest_147
       rect:
         serializedVersion: 2
-        x: 240
-        y: 80
+        x: 96
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3216,8 +3216,8 @@ TextureImporter:
       name: WildWest_148
       rect:
         serializedVersion: 2
-        x: 256
-        y: 80
+        x: 112
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3237,8 +3237,8 @@ TextureImporter:
       name: WildWest_149
       rect:
         serializedVersion: 2
-        x: 272
-        y: 80
+        x: 128
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3258,8 +3258,8 @@ TextureImporter:
       name: WildWest_150
       rect:
         serializedVersion: 2
-        x: 16
-        y: 64
+        x: 144
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3279,8 +3279,8 @@ TextureImporter:
       name: WildWest_151
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
+        x: 192
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3300,8 +3300,8 @@ TextureImporter:
       name: WildWest_152
       rect:
         serializedVersion: 2
-        x: 48
-        y: 64
+        x: 208
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3321,8 +3321,8 @@ TextureImporter:
       name: WildWest_153
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 224
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3342,8 +3342,8 @@ TextureImporter:
       name: WildWest_154
       rect:
         serializedVersion: 2
-        x: 80
-        y: 64
+        x: 240
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3363,8 +3363,8 @@ TextureImporter:
       name: WildWest_155
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
+        x: 256
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3384,8 +3384,8 @@ TextureImporter:
       name: WildWest_156
       rect:
         serializedVersion: 2
-        x: 112
-        y: 64
+        x: 272
+        y: 288
         width: 16
         height: 16
       alignment: 0
@@ -3405,8 +3405,8 @@ TextureImporter:
       name: WildWest_157
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
+        x: 16
+        y: 272
         width: 16
         height: 16
       alignment: 0
@@ -3426,8 +3426,8 @@ TextureImporter:
       name: WildWest_158
       rect:
         serializedVersion: 2
-        x: 144
-        y: 64
+        x: 32
+        y: 272
         width: 16
         height: 16
       alignment: 0
@@ -3447,8 +3447,8 @@ TextureImporter:
       name: WildWest_159
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
+        x: 48
+        y: 272
         width: 16
         height: 16
       alignment: 0
@@ -3468,8 +3468,8 @@ TextureImporter:
       name: WildWest_160
       rect:
         serializedVersion: 2
-        x: 208
-        y: 64
+        x: 64
+        y: 272
         width: 16
         height: 16
       alignment: 0
@@ -3489,8 +3489,8 @@ TextureImporter:
       name: WildWest_161
       rect:
         serializedVersion: 2
-        x: 224
-        y: 64
+        x: 16
+        y: 256
         width: 16
         height: 16
       alignment: 0
@@ -3510,8 +3510,8 @@ TextureImporter:
       name: WildWest_162
       rect:
         serializedVersion: 2
-        x: 240
-        y: 64
+        x: 32
+        y: 256
         width: 16
         height: 16
       alignment: 0
@@ -3531,8 +3531,8 @@ TextureImporter:
       name: WildWest_163
       rect:
         serializedVersion: 2
-        x: 256
-        y: 64
+        x: 48
+        y: 256
         width: 16
         height: 16
       alignment: 0
@@ -3552,8 +3552,8 @@ TextureImporter:
       name: WildWest_164
       rect:
         serializedVersion: 2
-        x: 272
-        y: 64
+        x: 64
+        y: 256
         width: 16
         height: 16
       alignment: 0
@@ -3574,7 +3574,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 48
+        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -3595,7 +3595,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 48
+        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -3616,7 +3616,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 48
+        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -3637,7 +3637,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 48
+        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -3653,300 +3653,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: WildWest_169
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf79327fe40e40e46ad97ee260560900
-      internalID: -1682638582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WildWest_170
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bea8c83bcbe498b46a1325c8759cf93f
-      internalID: -1231718518
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WildWest_171
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 344305e041d12994b97c2bb60c713c95
-      internalID: 1172636956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WildWest_172
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e04da15230561e74ebbe06ab87eaa5fc
-      internalID: 2063283259
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WildWest_173
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9c05df376ad44845ae321659793ee90
-      internalID: 223753307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WildWest_174
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d1b98fea8f741c4fbb5ef301486f7b2
-      internalID: 642256944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WildWest_175
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c671b4ce88d11644b3675391fec5943
-      internalID: -2041878384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WildWest_176
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58536b84ad37afe41a0fd59e603a7762
-      internalID: -1182599456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WildWest_177
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14373052b025dcd4283a9467beafd943
-      internalID: 1050899191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WildWest_178
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53a75210dc9f9f74c997d0a86d2c4ad1
-      internalID: -390682426
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WildWest_179
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 252c73a67fbfc0741868bbc5d2c20afa
-      internalID: -471770891
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WildWest_180
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c80e0b63121f4ef4680fecdb27f20e1a
-      internalID: -1366883999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WildWest_181
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d884917243c15854183f5911499f16e1
-      internalID: -123667700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WildWest_182
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2ba281e6f444f746a034cf9f67a7b5e
-      internalID: 1817863317
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -3958,120 +3664,57 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      WildWest_43: -1398363707
       WildWest_24: -161224984
       WildWest_72: 1674092849
-      WildWest_1: 190780127
-      WildWest_76: -468219025
-      WildWest_77: 362273182
-      WildWest_127: -173908061
-      WildWest_64: -1834719164
-      WildWest_99: -1259541718
-      WildWest_117: -551013358
-      WildWest_11: -1603156142
-      WildWest_115: 2009229699
-      WildWest_90: 261550593
-      WildWest_49: 98826530
-      WildWest_62: -2092189217
-      WildWest_52: 1746272005
-      WildWest_37: 1231435941
-      WildWest_172: 2063283259
-      WildWest_98: -704104871
-      WildWest_50: 1528393850
-      WildWest_10: -579253335
-      WildWest_94: 1168567500
-      WildWest_38: 124763127
-      WildWest_155: -407227591
-      WildWest_60: -677829851
-      WildWest_152: 77514984
-      WildWest_40: -1601121389
-      WildWest_173: 223753307
-      WildWest_144: 2053669679
-      WildWest_154: 789740779
-      WildWest_73: 1306148087
-      WildWest_85: -689486872
-      WildWest_146: -154654429
-      WildWest_137: 1666549761
-      WildWest_167: 1685851873
-      WildWest_22: 786817523
-      WildWest_125: -1098100246
-      WildWest_54: 1131599253
-      WildWest_181: -123667700
-      WildWest_35: -1943361454
-      WildWest_108: 689912008
-      WildWest_141: -1210331728
-      WildWest_138: -1931200514
-      WildWest_0: 1525278342
-      WildWest_164: 735297115
-      WildWest_103: 779230645
-      WildWest_114: 1613060096
-      WildWest_165: -2054244836
-      WildWest_20: -1358589362
-      WildWest_134: -2122964102
-      WildWest_121: -810370821
-      WildWest_66: -164014357
-      WildWest_104: 265515789
-      WildWest_130: 338872340
-      WildWest_42: 1330996161
-      WildWest_47: 950640369
-      WildWest_80: 689958089
-      WildWest_13: 1801112495
-      WildWest_55: -2031774881
-      WildWest_15: -1686510942
-      WildWest_48: -318941597
-      WildWest_123: 1610804913
-      WildWest_3: 223575072
-      WildWest_113: -834665979
-      WildWest_95: -552721585
-      WildWest_177: 1050899191
-      WildWest_67: 79254975
-      WildWest_25: -190818039
-      WildWest_135: 645810989
-      WildWest_109: -872646795
-      WildWest_168: -937775033
-      WildWest_33: -301892939
-      WildWest_78: 314845747
-      WildWest_84: 593540397
-      WildWest_79: 1504755605
-      WildWest_82: -1616752025
-      WildWest_158: -613569118
-      WildWest_136: -1287593001
-      WildWest_171: 1172636956
-      WildWest_68: -172672260
-      WildWest_71: -1301327179
-      WildWest_160: -1613351121
-      WildWest_120: -398565282
-      WildWest_53: 102667918
-      WildWest_163: -632629550
       WildWest_159: -1634242291
-      WildWest_43: -1398363707
+      WildWest_1: 190780127
       WildWest_61: 537892926
+      WildWest_77: 362273182
+      WildWest_76: -468219025
       WildWest_39: 1637647546
       WildWest_89: 1417674260
       WildWest_5: 390392814
       WildWest_106: -1420533135
-      WildWest_169: -1682638582
+      WildWest_64: -1834719164
+      WildWest_99: -1259541718
       WildWest_75: 510015110
       WildWest_91: 752413463
-      WildWest_180: -1366883999
-      WildWest_170: -1231718518
+      WildWest_11: -1603156142
+      WildWest_115: 2009229699
+      WildWest_90: 261550593
+      WildWest_49: 98826530
       WildWest_19: 2126491472
+      WildWest_62: -2092189217
       WildWest_166: -322090535
       WildWest_26: -259490931
+      WildWest_127: -173908061
       WildWest_70: 487355466
+      WildWest_117: -551013358
       WildWest_143: 552394245
+      WildWest_52: 1746272005
       WildWest_122: 705111611
       WildWest_27: 573361147
       WildWest_118: 2075499953
+      WildWest_37: 1231435941
+      WildWest_98: -704104871
       WildWest_140: -894480988
-      WildWest_102: -773456118
+      WildWest_50: 1528393850
+      WildWest_10: -579253335
       WildWest_45: -1270888126
+      WildWest_94: 1168567500
       WildWest_153: -308435145
+      WildWest_38: 124763127
       WildWest_97: 931353927
+      WildWest_102: -773456118
       WildWest_83: 155086021
+      WildWest_60: -677829851
       WildWest_107: 1589736343
       WildWest_92: 1266476217
       WildWest_139: -1256358459
+      WildWest_40: -1601121389
       WildWest_116: -1166680923
+      WildWest_152: 77514984
       WildWest_126: 2059165026
       WildWest_100: -415981143
       WildWest_7: 388643296
@@ -4079,63 +3722,112 @@ TextureImporter:
       WildWest_101: -1217484083
       WildWest_9: 11738184
       WildWest_132: 167470884
+      WildWest_144: 2053669679
       WildWest_128: -715147746
+      WildWest_154: 789740779
       WildWest_63: -640866853
-      WildWest_176: -1182599456
+      WildWest_155: -407227591
+      WildWest_73: 1306148087
+      WildWest_85: -689486872
       WildWest_28: -1927561904
+      WildWest_146: -154654429
       WildWest_81: -1502758087
       WildWest_21: 772456834
       WildWest_87: -1277244249
+      WildWest_22: 786817523
+      WildWest_167: 1685851873
       WildWest_131: -618730869
-      WildWest_182: 1817863317
+      WildWest_137: 1666549761
+      WildWest_125: -1098100246
+      WildWest_54: 1131599253
+      WildWest_35: -1943361454
+      WildWest_108: 689912008
       WildWest_41: -1779478245
       WildWest_32: 1118468193
       WildWest_86: 671504800
       WildWest_150: -947515369
       WildWest_124: -463881917
+      WildWest_138: -1931200514
       WildWest_157: 1618200970
-      WildWest_175: -2041878384
+      WildWest_141: -1210331728
       WildWest_36: 2046892109
       WildWest_16: 1328701853
       WildWest_58: -47255767
       WildWest_30: 2826626
+      WildWest_0: 1525278342
+      WildWest_164: 735297115
       WildWest_14: -1222708243
       WildWest_148: 301463352
-      WildWest_179: -471770891
+      WildWest_103: 779230645
       WildWest_46: -270385368
       WildWest_151: 1095282771
       WildWest_4: 1338842612
-      WildWest_174: 642256944
+      WildWest_114: 1613060096
+      WildWest_165: -2054244836
+      WildWest_20: -1358589362
+      WildWest_134: -2122964102
+      WildWest_121: -810370821
       WildWest_29: -1141430344
-      WildWest_147: -1174395828
+      WildWest_66: -164014357
       WildWest_17: 243342319
+      WildWest_104: 265515789
+      WildWest_130: 338872340
+      WildWest_42: 1330996161
+      WildWest_47: 950640369
       WildWest_133: -1406241910
+      WildWest_147: -1174395828
       WildWest_12: -1051871251
+      WildWest_80: 689958089
+      WildWest_13: 1801112495
+      WildWest_55: -2031774881
       WildWest_93: 546507829
       WildWest_2: -1924548044
-      WildWest_161: -950807176
+      WildWest_15: -1686510942
+      WildWest_48: -318941597
       WildWest_142: -1429268054
       WildWest_74: -1714136339
+      WildWest_123: 1610804913
+      WildWest_161: -950807176
+      WildWest_3: 223575072
       WildWest_111: -1280054429
+      WildWest_95: -552721585
+      WildWest_113: -834665979
+      WildWest_67: 79254975
       WildWest_31: 443905145
       WildWest_34: -582369307
+      WildWest_25: -190818039
       WildWest_65: -1839201195
+      WildWest_135: 645810989
       WildWest_119: 1960388945
+      WildWest_109: -872646795
       WildWest_6: 1376161945
+      WildWest_168: -937775033
       WildWest_145: 2114534509
       WildWest_23: -1912791766
       WildWest_57: -237100265
-      WildWest_162: 1150556232
+      WildWest_33: -301892939
       WildWest_129: 319804316
-      WildWest_96: 482287366
+      WildWest_162: 1150556232
+      WildWest_78: 314845747
+      WildWest_84: 593540397
+      WildWest_79: 1504755605
+      WildWest_82: -1616752025
       WildWest_88: -1803478339
-      WildWest_112: 855110170
+      WildWest_96: 482287366
       WildWest_18: -168868706
       WildWest_59: 1743579615
+      WildWest_112: 855110170
+      WildWest_136: -1287593001
+      WildWest_68: -172672260
       WildWest_8: 830278043
       WildWest_56: -1085140041
+      WildWest_71: -1301327179
       WildWest_156: 1073817433
-      WildWest_178: -390682426
+      WildWest_158: -613569118
+      WildWest_160: -1613351121
+      WildWest_120: -398565282
+      WildWest_53: 102667918
+      WildWest_163: -632629550
       WildWest_51: 1602066146
       WildWest_44: -1887284459
       WildWest_110: 225452046

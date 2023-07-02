@@ -675,8 +675,8 @@ TextureImporter:
       name: Wild_West_Tiles1_27
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 32
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -696,8 +696,8 @@ TextureImporter:
       name: Wild_West_Tiles1_28
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
+        x: 48
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -709,6 +709,216 @@ TextureImporter:
       bones: []
       spriteID: 21e281c54f18bb344938a361babd089c
       internalID: -536867007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wild_West_Tiles1_29
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065935eddf8ca2b49bd7c489df73bf0d
+      internalID: 663108797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wild_West_Tiles1_30
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d99950cd5b8d93498a579ad64114d37
+      internalID: 304458406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wild_West_Tiles1_31
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a960f887978b8a4f8767c366f2d6d04
+      internalID: -1737600520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wild_West_Tiles1_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752e795116d625c4d90d6ca798b4dd7a
+      internalID: -2029096422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wild_West_Tiles1_33
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11741e577e2147b4fabf7df88cda19b3
+      internalID: 2066783089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wild_West_Tiles1_34
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a42291cb00f4a4cb460c618e83e7ed
+      internalID: 1365232236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wild_West_Tiles1_35
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa9eab4630fa2845bc7ddc5bd761971
+      internalID: -400423494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wild_West_Tiles1_36
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f066797a5aad2ca4980af3b40169af79
+      internalID: -384388757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wild_West_Tiles1_37
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5249123f9f3041443af7694ba0c818ef
+      internalID: 955888597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wild_West_Tiles1_38
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35aa6180afc650428c74874090047bd
+      internalID: 1430018317
       vertices: []
       indices: 
       edges: []
@@ -732,16 +942,25 @@ TextureImporter:
       Wild_West_Tiles1_16: 878389934
       Wild_West_Tiles1_0: 1149489167
       Wild_West_Tiles1_1: -430068748
+      Wild_West_Tiles1_38: 1430018317
       Wild_West_Tiles1_26: 642673021
       Wild_West_Tiles1_7: -1929918400
+      Wild_West_Tiles1_33: 2066783089
       Wild_West_Tiles1_3: 1978846278
+      Wild_West_Tiles1_29: 663108797
+      Wild_West_Tiles1_37: 955888597
       Wild_West_Tiles1_10: -1365491472
       Wild_West_Tiles1_17: 32201121
       Wild_West_Tiles1_28: -536867007
       Wild_West_Tiles1_5: 923504291
+      Wild_West_Tiles1_31: -1737600520
       Wild_West_Tiles1_6: 1871425417
       Wild_West_Tiles1_11: -1876284587
+      Wild_West_Tiles1_30: 304458406
+      Wild_West_Tiles1_34: 1365232236
       Wild_West_Tiles1_2: 527537971
+      Wild_West_Tiles1_36: -384388757
+      Wild_West_Tiles1_35: -400423494
       Wild_West_Tiles1_12: -1575669989
       Wild_West_Tiles1_18: -1840091320
       Wild_West_Tiles1_22: -92648123
@@ -753,6 +972,7 @@ TextureImporter:
       Wild_West_Tiles1_25: 1918365424
       Wild_West_Tiles1_9: -1315194296
       Wild_West_Tiles1_20: 1393777112
+      Wild_West_Tiles1_32: -2029096422
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
