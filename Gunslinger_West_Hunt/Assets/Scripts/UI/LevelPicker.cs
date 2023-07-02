@@ -16,10 +16,11 @@ public class LevelPicker : MonoBehaviour
 
     private void Start()
     {
-        if (levelMeta.isNextLevelUnlocked && levelMeta.nextLevel == levelParameters.levelTitle)
-        {
-            levelParameters.levelAvailable = true;
-        }
+        levelParameters.levelAvailable = levelMeta.CheckAvailableLevel(levelParameters.levelTitle);
+        //if (levelMeta.isNextLevelUnlocked && levelMeta.nextLevel == levelParameters.levelTitle)
+        //{
+        //    levelParameters.levelAvailable = true;
+        //}
         button = GetComponent<Button>();
         GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         button.interactable = levelParameters.levelAvailable;
@@ -50,6 +51,7 @@ public class LevelPicker : MonoBehaviour
         levelMeta.isNextLevelUnlocked = false;
         levelMeta.levelTheme = levelParameters.levelTheme;
     }
+  
 
     
 }

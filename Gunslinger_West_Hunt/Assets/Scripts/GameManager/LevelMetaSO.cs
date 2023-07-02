@@ -10,6 +10,7 @@ public class LevelMetaSO : ScriptableObject
     public int targets = 1;
     public string sceneName = "Start Menu";
     [SerializeField]private List<string> passedLevels = new List<string>();
+    [SerializeField]private List<string> availableLevels = new List<string>();
     public string nextLevel = "none";
     public bool isNextLevelUnlocked = false;
     public string levelTheme = "none";
@@ -19,11 +20,18 @@ public class LevelMetaSO : ScriptableObject
         if(!passedLevels.Contains(level)) 
         {
             passedLevels.Add(level);
+            availableLevels.Add(nextLevel);
+            Debug.Log("Recorded " + level + " -> " + nextLevel);
         }
     }
 
     public bool HasRecordedLevel(string level)
     {
         return passedLevels.Contains(level);
+    }
+
+    public bool CheckAvailableLevel(string level)
+    {
+        return availableLevels.Contains(level);
     }
 }
