@@ -23,6 +23,7 @@ public class LevelEndManager : MonoBehaviour
 
     public void InitiateEndScreen(string levelName, string status, string money, string sceneName)
     {
+        Cursor.visible = true;
         ToggleLevelClear(false);
         this.sceneName = sceneName;
         this.levelName.text = levelName;

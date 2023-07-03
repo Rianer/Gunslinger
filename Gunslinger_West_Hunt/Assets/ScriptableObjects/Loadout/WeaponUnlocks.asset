@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4510fb04828a749958b36739b28754, type: 3}
   m_Name: WeaponUnlocks
   m_EditorClassIdentifier: 
-  unlockedWeapons:
-  - 
-  - Revolver
+  unlockedWeapons: []

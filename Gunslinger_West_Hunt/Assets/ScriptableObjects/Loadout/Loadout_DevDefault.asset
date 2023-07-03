@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07ab41961d1640d42897f1ebcd58c4b6, type: 3}
   m_Name: Loadout_DevDefault
   m_EditorClassIdentifier: 
-  gunPrefab: {fileID: 5152138835734268787, guid: 5fd075c96e9f3ff43bb189937922440c, type: 3}
-  equipedWeaponImage: {fileID: 21300000, guid: 14090adf1f1c26c4983465e26a02fa37, type: 3}
-  equipedWeaponName: Revolver
-  playerMoney: 365
+  gunPrefab: {fileID: 0}
+  equipedWeaponImage: {fileID: 0}
+  equipedWeaponName: 
+  playerMoney: 300

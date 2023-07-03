@@ -22,12 +22,12 @@ public class GameManager : MonoBehaviour
     public LevelMetaSO levelMeta;
     public bool levelWon;
 
-    public Sprite deadPlayerSprite;
-
     public LevelEndManager levelEndManager;
 
     public WeaponGaugeManager gaugeManager;
     public SoundManager soundManager;
+
+    public GameObject deadPlayer;
 
     private void Awake()
     {
@@ -55,11 +55,10 @@ public class GameManager : MonoBehaviour
 
     public void KillPlayer()
     {
-        //Destroy(player);
-        player.GetComponent<SpriteRenderer>().sprite = deadPlayerSprite;
+        Instantiate(deadPlayer, player.transform);
         Inventory.GetInstance().GetInventoryItems().Clear();
-        levelEndManager.InitiateEndScreen(levelMeta.levelName, "You Died!", "0", levelMeta.sceneName);
-
+        levelEndManager.InitiateEndScreen(levelMeta.levelName, "You Died!", "$0", levelMeta.sceneName);
+        player.GetComponent<SpriteRenderer>().enabled = false;
     }
 
     public void CheckWinCondition()

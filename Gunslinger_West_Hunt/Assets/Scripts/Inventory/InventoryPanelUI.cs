@@ -19,6 +19,7 @@ public class InventoryPanelUI : MonoBehaviour
             {
                 Debug.Log("Access inventory");
                 inventoryUI.SetActive(!inventoryUI.activeSelf);
+                Cursor.visible = !Cursor.visible;
                 axisInUse = true;
             }
         }

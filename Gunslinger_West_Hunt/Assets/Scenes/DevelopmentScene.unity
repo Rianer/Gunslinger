@@ -12292,6 +12292,10 @@ PrefabInstance:
       propertyPath: isPatroller
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6333664714262135500, guid: 904d92e3c49df1e408005c0b7ae24b24, type: 3}
+      propertyPath: isTarget
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 904d92e3c49df1e408005c0b7ae24b24, type: 3}
 --- !u!1001 &1151066620
@@ -12481,7 +12485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6333664714262135500, guid: 904d92e3c49df1e408005c0b7ae24b24, type: 3}
       propertyPath: isTarget
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6333664714262135500, guid: 904d92e3c49df1e408005c0b7ae24b24, type: 3}
       propertyPath: droppableItems.Array.size

@@ -330,6 +330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce014895908afd47a81106311d4c1e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crossHairPrefab: {fileID: 8014603109082312291, guid: 97d8bd818e5d67d4a8621c7bb66e59f0, type: 3}
+  crossHair: {fileID: 0}
 --- !u!114 &7826389935521218941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,3 +386,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterStats: {fileID: 11400000, guid: 115dd6348e67d044d8573ebbc3062f46, type: 2}
+  isTarget: 0
+  droppableItems: []

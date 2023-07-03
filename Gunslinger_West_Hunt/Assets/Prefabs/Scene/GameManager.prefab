@@ -54,10 +54,10 @@ MonoBehaviour:
   remainingTargets: 0
   levelMeta: {fileID: 11400000, guid: 3a6795ff97caa2f4f89a604792e7bb0d, type: 2}
   levelWon: 0
-  deadPlayerSprite: {fileID: 21300000, guid: b7bbf828f54c40f47922ad56194a4cab, type: 3}
   levelEndManager: {fileID: 0}
   gaugeManager: {fileID: 0}
   soundManager: {fileID: 1802682667949909977}
+  deadPlayer: {fileID: 6995950316060675915, guid: af9f9048315a65d48bd412bfa8e60d6a, type: 3}
 --- !u!1 &5703639224134104110
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,4 +156,10 @@ MonoBehaviour:
     isLoop: 0
     volume: 0.796
     priority: 148
+    soundSource: {fileID: 0}
+  - name: light_revolver_shooting
+    clip: {fileID: 8300000, guid: 5e797e737165a0e49be5894fdee37076, type: 3}
+    isLoop: 0
+    volume: 0.799
+    priority: 150
     soundSource: {fileID: 0}

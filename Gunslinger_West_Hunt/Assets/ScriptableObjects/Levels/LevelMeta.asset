@@ -12,18 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b295c9422b6c2ae46adaacce768aa487, type: 3}
   m_Name: LevelMeta
   m_EditorClassIdentifier: 
-  levelName: Black-Ridge Hunt
-  levelReward: 200
-  targets: 4
-  sceneName: Level2
-  passedLevels:
-  - Tutorial
-  - Lockdown
-  - The Death Valley
+  levelName: Lockdown
+  levelReward: 100
+  targets: 1
+  sceneName: DevelopmentScene
+  passedLevels: []
   availableLevels:
   - Lockdown
-  - The Death Valley
-  - Black-Ridge Hunt
-  nextLevel: none
-  isNextLevelUnlocked: 0
-  levelTheme: level_3_theme
+  nextLevel: The Death Valley
+  isNextLevelUnlocked: 1
+  levelTheme: level_1_theme

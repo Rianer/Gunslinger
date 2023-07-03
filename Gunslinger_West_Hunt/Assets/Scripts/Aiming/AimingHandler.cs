@@ -8,11 +8,15 @@ public class AimingHandler : MonoBehaviour, IObserver<InputObserverArgs>
 {
     private Rigidbody2D rb;
     private Vector2 mousePosition;
+    public GameObject crossHairPrefab;
+    private GameObject crossHair;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         mousePosition = new Vector2();
+        crossHair = Instantiate(crossHairPrefab, mousePosition, Quaternion.identity);
+        Cursor.visible = false;
     }
 
     private void FixedUpdate()
@@ -25,5 +29,6 @@ public class AimingHandler : MonoBehaviour, IObserver<InputObserverArgs>
     public void UpdateObserver(InputObserverArgs args)
     {
         mousePosition = args.MousePosition;
+        crossHair.transform.position = mousePosition;
     }
 }

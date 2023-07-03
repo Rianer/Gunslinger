@@ -128,9 +128,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ceccfcdf57ed840a5ff39d8946fdd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayerWeapon: 0
   firePoint: {fileID: 4340900226066690309}
   bulletPrefab: {fileID: 5398997451834425328, guid: 7f0a84d3b89b140499e8a3698d3cb71a, type: 3}
   weaponStats: {fileID: 11400000, guid: 0aa0fa5143936d24ca13cc7113a719f2, type: 2}
+  shootingSoundName: light_revolver_shooting
 --- !u!1 &5152138835734268787
 GameObject:
   m_ObjectHideFlags: 0
