@@ -23,11 +23,12 @@ MonoBehaviour:
     people were reporting that some... creatures are spotted in that region.
 
     Take
-    care of them and make sure the Outlaw Boss doesn''t get alive out of this.'
+    care of them and make sure the Outlaw Boss doesn''t get alive out of this. He
+    defenetely isn''t alone.'
   thumbnail: {fileID: 0}
   levelPassed: 0
   levelAvailable: 0
   nextLevelUnlock: none
   levelTheme: level_3_theme
   reward: 200
-  targets: 4
+  targets: 5

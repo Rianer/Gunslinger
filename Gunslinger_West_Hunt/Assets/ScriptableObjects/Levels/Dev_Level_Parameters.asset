@@ -17,7 +17,11 @@ MonoBehaviour:
   levelDescription: 'Escaping the dungeon is your priority.
 
     Kill all the enemies
-    and secure your freedom... and a good reward.'
+    and secure your freedom... and a good reward.
+
+
+    #The enemies are dummies
+    for you to train your skills'
   thumbnail: {fileID: 0}
   levelPassed: 0
   levelAvailable: 1

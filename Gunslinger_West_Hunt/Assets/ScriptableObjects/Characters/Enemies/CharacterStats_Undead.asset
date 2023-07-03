@@ -16,7 +16,7 @@ MonoBehaviour:
   armorPoints: 0
   kineticResistance: 0.8
   elementalResistance: 0.9
-  spiritualResistance: -0.3
+  spiritualResistance: -0.4
   itemDropChance: 0
   allowArmorHeal: 0
   armorHealCooldown: 0

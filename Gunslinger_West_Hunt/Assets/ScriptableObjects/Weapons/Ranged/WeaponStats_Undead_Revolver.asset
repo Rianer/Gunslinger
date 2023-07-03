@@ -21,5 +21,5 @@ MonoBehaviour:
   damageArea: 0
   bulletType: 0
   reloadTime_S: 4
-  magazineSize: 6
+  magazineSize: 3
   ignoreLayer: 8

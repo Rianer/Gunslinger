@@ -14,8 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Level1
   levelTitle: The Death Valley
-  levelDescription: 'This is your first hunt, try not to die on your first day of
-    work. '
+  levelDescription: 'The first real hunt...
+
+    The Sheriff of a town in The Death
+    Valley has been killed and his town center ravaged by the Outlaws.
+
+    They
+    are dangerous, but so are you. Go and prove them how the valley has gotten its
+    name. '
   thumbnail: {fileID: 0}
   levelPassed: 0
   levelAvailable: 0

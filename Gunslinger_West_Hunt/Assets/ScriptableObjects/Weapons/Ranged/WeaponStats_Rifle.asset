@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99140cef1b8e0ad4e97e42865fb80d26, type: 3}
   m_Name: WeaponStats_Rifle
   m_EditorClassIdentifier: 
-  damage: 14
+  damage: 16
   damageType: 1
   attackType: 0
   singleFire: 1

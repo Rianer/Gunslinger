@@ -45,6 +45,9 @@ public class MenuGroup : MonoBehaviour
 
     public void EnterAnimation()
     {
+        if(animator == null) {  
+            animator = GetComponent<Animator>();
+        }
         Debug.Log($"Playing {enterAnimation}");
         animator.Play(enterAnimation);
     }
